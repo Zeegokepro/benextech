@@ -8,51 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Benextech Dark Theme */
+    --background: 210 11% 11%; /* Charcoal Black #1C1C1E */
+    --foreground: 0 0% 100%; /* White #FFFFFF */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 11% 15%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 11% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 211 100% 50%; /* Electric Blue #007BFF */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 11% 20%; /* Darker card variant */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 11% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 158 100% 50%; /* Neon Green #00FFAB */
+    --accent-foreground: 210 11% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 11% 25%;
+    --input: 210 11% 20%;
+    --ring: 211 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Design Tokens */
+    --glow-primary: 211 100% 50%;
+    --glow-accent: 158 100% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(158 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(210 11% 15%), hsl(210 11% 20%));
+    --shadow-glow: 0 0 20px hsl(var(--glow-primary) / 0.3);
+    --shadow-accent-glow: 0 0 20px hsl(var(--glow-accent) / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 11% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 211 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 11% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 11% 25%;
+    --sidebar-ring: 211 100% 50%;
   }
 
   .dark {
@@ -100,6 +103,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  /* Glowing Button Styles */
+  .btn-glow {
+    @apply relative overflow-hidden;
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .btn-glow-accent:hover {
+    box-shadow: var(--shadow-accent-glow);
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+    background: var(--gradient-card);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Futuristic Border */
+  .border-glow {
+    @apply border border-primary/30;
+    box-shadow: inset 0 0 10px hsl(var(--glow-primary) / 0.1);
+  }
+
+  .border-glow:hover {
+    @apply border-primary;
+    box-shadow: 
+      inset 0 0 10px hsl(var(--glow-primary) / 0.2),
+      0 0 10px hsl(var(--glow-primary) / 0.3);
+  }
+
+  /* Section Animations */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

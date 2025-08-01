@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Star, Quote, Filter, Smartphone, Laptop, Battery, Database, Tv, Settings } from "lucide-react";
+import { Star, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -11,211 +10,146 @@ const Clients = () => {
   const testimonials = [
     {
       id: 1,
-      name: "T.A.",
+      name: "Adebayo Ogundimu",
       location: "Lagos",
       category: "Phone",
-      service: "iPhone Screen Repair",
       rating: 5,
-      review: "They brought my MacBook back to life in 48hrs. Top-tier service! The attention to detail and professionalism exceeded my expectations.",
-      avatar: "T.A",
-      verified: true,
-      date: "2 weeks ago"
+      review: "Fixed my iPhone screen perfectly. Professional service and quality parts. Highly recommended!",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 2,
-      name: "M.O.",
+      name: "Chidinma Okoro",
       location: "Abuja",
       category: "Solar",
-      service: "Solar Installation",
       rating: 5,
-      review: "Professional solar installation. My electricity bills dropped 80%! The team was knowledgeable and the system works flawlessly.",
-      avatar: "M.O",
-      verified: true,
-      date: "1 month ago"
+      review: "Excellent solar installation. My electricity bills reduced by 80%. Professional and reliable team.",
+      image: "https://images.unsplash.com/photo-1494790108755-2616c0763dad?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 3,
-      name: "S.K.",
+      name: "Emeka Nwachukwu",
       location: "Port Harcourt",
       category: "Laptop",
-      service: "Data Recovery",
       rating: 5,
-      review: "Fast, reliable, and affordable. Benextech is my go-to tech support. They recovered data I thought was lost forever.",
-      avatar: "S.K",
-      verified: true,
-      date: "3 weeks ago"
+      review: "Data recovery service was exceptional. Retrieved all my lost business files. Lifesavers!",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 4,
-      name: "A.B.",
+      name: "Fatima Bello",
       location: "Kano",
-      category: "Solar",
-      service: "Inverter Setup",
-      rating: 5,
-      review: "Excellent solar system installation. Professional team, quality equipment, and amazing after-sales support. Highly recommended!",
-      avatar: "A.B",
-      verified: true,
-      date: "1 week ago"
+      category: "Phone",
+      rating: 4,
+      review: "Quick Samsung repair service. Screen replacement done within hours. Great customer service.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 5,
-      name: "F.L.",
-      location: "Lagos",
-      category: "Phone",
-      service: "Android Repair",
+      name: "Jide Olawale",
+      location: "Ibadan",
+      category: "Laptop",
       rating: 5,
-      review: "My Samsung Galaxy was completely dead after water damage. They fixed it perfectly and it's working like new. Amazing service!",
-      avatar: "F.L",
-      verified: true,
-      date: "2 days ago"
+      review: "MacBook logic board repair was handled professionally. Works better than before!",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 6,
-      name: "D.C.",
-      location: "Ibadan",
-      category: "Laptop",
-      service: "MacBook Repair",
+      name: "Kemi Adewale",
+      location: "Lagos",
+      category: "Solar",
       rating: 5,
-      review: "MacBook logic board repair was handled professionally. They kept me updated throughout the process. Excellent work!",
-      avatar: "D.C",
-      verified: true,
-      date: "1 month ago"
+      review: "Complete solar system installation for my home. Team was knowledgeable and efficient.",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 7,
-      name: "R.N.",
-      location: "Enugu",
-      category: "Recovery",
-      service: "Data Recovery",
-      rating: 5,
-      review: "Lost 3 years of business documents due to hard drive failure. Benextech recovered 100% of my data. Lifesavers!",
-      avatar: "R.N",
-      verified: true,
-      date: "2 weeks ago"
+      name: "Musa Ibrahim",
+      location: "Kaduna",
+      category: "Phone",
+      rating: 4,
+      review: "iPhone battery replacement was affordable and quick. Phone lasts all day now.",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 8,
-      name: "O.P.",
-      location: "Calabar",
-      category: "Solar",
-      service: "Battery Upgrade",
+      name: "Ngozi Eze",
+      location: "Enugu",
+      category: "Laptop",
       rating: 5,
-      review: "Upgraded my solar battery system. The improvement in backup time is incredible. Professional installation and fair pricing.",
-      avatar: "O.P",
-      verified: true,
-      date: "3 days ago"
+      review: "PC optimization service made my old computer feel brand new. Amazing performance boost.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 9,
-      name: "I.M.",
-      location: "Lagos",
-      category: "Phone",
-      service: "iPhone Battery",
+      name: "Olamide Durojaiye",
+      location: "Oshogbo",
+      category: "Solar",
       rating: 5,
-      review: "iPhone battery replacement was quick and affordable. Phone lasts all day now. Great service and warranty coverage.",
-      avatar: "I.M",
-      verified: true,
-      date: "1 week ago"
+      review: "Solar inverter setup was seamless. Quality equipment and excellent after-sales support.",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 10,
-      name: "K.A.",
-      location: "Kaduna",
-      category: "Laptop",
-      service: "PC Optimization",
+      name: "Sade Adeyemi",
+      location: "Lagos",
+      category: "Phone",
       rating: 5,
-      review: "My slow laptop is now blazing fast! They upgraded RAM and SSD, plus optimized everything. Worth every naira spent.",
-      avatar: "K.A",
-      verified: true,
-      date: "4 days ago"
+      review: "Water-damaged phone repair was successful. Thought it was beyond repair but they fixed it perfectly.",
+      image: "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 11,
-      name: "U.E.",
-      location: "Warri",
-      category: "Recovery",
-      service: "Virus Removal",
-      rating: 5,
-      review: "Computer was completely infected with malware. They cleaned everything and set up proper security. No issues since then.",
-      avatar: "U.E",
-      verified: true,
-      date: "2 weeks ago"
+      name: "Tunde Olaniyi",
+      location: "Ilorin",
+      category: "Laptop",
+      rating: 4,
+      review: "Virus removal and OS installation was thorough. Computer runs smoothly now.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 12,
-      name: "G.T.",
-      location: "Jos",
+      name: "Uchechi Nwosu",
+      location: "Owerri",
       category: "Solar",
-      service: "Complete Solar Setup",
       rating: 5,
-      review: "Full solar installation for my shop. No more generator costs! The system has been running perfectly for 6 months.",
-      avatar: "G.T",
-      verified: true,
-      date: "6 months ago"
+      review: "Battery upgrade for my solar system was professional. Backup time improved significantly.",
+      image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 13,
-      name: "N.H.",
-      location: "Abeokuta",
+      name: "Victor Okonkwo",
+      location: "Awka",
       category: "Phone",
-      service: "Screen Replacement",
       rating: 5,
-      review: "Cracked my phone screen badly. They replaced it with high-quality screen and it looks brand new. Excellent craftsmanship!",
-      avatar: "N.H",
-      verified: true,
-      date: "5 days ago"
+      review: "Screen repair for my Galaxy phone. Quality replacement and reasonable pricing.",
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 14,
-      name: "B.S.",
-      location: "Lagos",
+      name: "Yusuf Abubakar",
+      location: "Maiduguri",
       category: "Laptop",
-      service: "Keyboard Replacement",
-      rating: 5,
-      review: "Laptop keyboard stopped working. Quick diagnosis and replacement. The new keyboard feels even better than the original.",
-      avatar: "B.S",
-      verified: true,
-      date: "1 week ago"
+      rating: 4,
+      review: "Laptop keyboard replacement was quick. New keyboard works perfectly and feels great.",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 15,
-      name: "C.O.",
-      location: "Owerri",
-      category: "Recovery",
-      service: "OS Installation",
+      name: "Zainab Musa",
+      location: "Gombe",
+      category: "Solar",
       rating: 5,
-      review: "Fresh Windows installation with all software setup. Computer runs like new and they provided helpful training too.",
-      avatar: "C.O",
-      verified: true,
-      date: "3 weeks ago"
+      review: "Solar panel installation was done with precision. Already seeing savings on electricity bills.",
+      image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
-  const filters = ["All", "Phone", "Laptop", "Solar", "Recovery"];
+  const filters = ["All", "Phone", "Laptop", "Solar"];
 
   const filteredTestimonials = selectedFilter === "All" 
     ? testimonials 
     : testimonials.filter(t => t.category === selectedFilter);
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case "Phone": return Smartphone;
-      case "Laptop": return Laptop;
-      case "Solar": return Battery;
-      case "Recovery": return Database;
-      default: return Settings;
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "Phone": return "text-primary";
-      case "Laptop": return "text-accent";
-      case "Solar": return "text-primary";
-      case "Recovery": return "text-accent";
-      default: return "text-muted-foreground";
-    }
-  };
 
   return (
     <div className="w-full">
@@ -293,268 +227,73 @@ const Clients = () => {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredTestimonials.map((testimonial) => {
-              const CategoryIcon = getCategoryIcon(testimonial.category);
-              return (
-                <Card key={testimonial.id} className="card-hover border-glow relative">
-                  <CardContent className="p-6">
-                    {/* Quote Icon */}
-                    <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                    
-                    {/* Rating */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                        ))}
-                      </div>
-                      <Badge variant="outline" className="text-xs border-primary/30">
-                        <CategoryIcon className="w-3 h-3 mr-1" />
-                        {testimonial.category}
-                      </Badge>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredTestimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="card-hover bg-card border border-border shadow-md hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  {/* Profile Image */}
+                  <div className="mb-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full mx-auto object-cover border-2 border-primary/20"
+                    />
+                  </div>
+                  
+                  {/* Rating */}
+                  <div className="flex justify-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
 
-                    {/* Review Text */}
-                    <p className="text-muted-foreground mb-4 italic">
-                      "{testimonial.review}"
-                    </p>
+                  {/* Review Text */}
+                  <p className="text-muted-foreground mb-4 italic text-sm leading-relaxed">
+                    "{testimonial.review}"
+                  </p>
 
-                    {/* Service Type */}
-                    <div className="text-sm text-primary mb-4 font-medium">
-                      {testimonial.service}
-                    </div>
-
-                    {/* Client Info */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold mr-3 ${
-                          testimonial.category === 'Phone' || testimonial.category === 'Solar' 
-                            ? 'bg-primary text-white' 
-                            : 'bg-accent text-background'
-                        }`}>
-                          {testimonial.avatar}
-                        </div>
-                        <div>
-                          <div className="flex items-center">
-                            <span className="text-sm font-medium">{testimonial.name}</span>
-                            {testimonial.verified && (
-                              <div className="w-4 h-4 bg-accent rounded-full flex items-center justify-center ml-1">
-                                <span className="text-xs text-background">✓</span>
-                              </div>
-                            )}
-                          </div>
-                          <span className="text-xs text-muted-foreground">{testimonial.location}</span>
-                        </div>
-                      </div>
-                      <span className="text-xs text-muted-foreground">{testimonial.date}</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                  {/* Client Info */}
+                  <div className="border-t border-border pt-4">
+                    <h4 className="font-bold text-foreground mb-1">{testimonial.name}</h4>
+                    <p className="text-xs text-muted-foreground">{testimonial.location}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Reviews */}
+      {/* CTA Section */}
       <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 slide-up">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Featured <span className="text-accent">Client Stories</span>
+              Ready to Join Our <span className="text-primary">Happy Clients</span>?
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Detailed stories from clients who experienced exceptional service and results.
+            <p className="text-muted-foreground text-lg mb-8">
+              Experience the same quality service and satisfaction. Contact us today for your tech needs.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="btn-glow bg-primary hover:bg-primary/90"
+                asChild
+              >
+                <Link to="/contact">Get Started Today</Link>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="btn-glow border-glow"
+                asChild
+              >
+                <Link to="/services">View Our Services</Link>
+              </Button>
+            </div>
           </div>
-
-          <div className="space-y-8">
-            {/* Business Client Feature */}
-            <Card className="border-glow">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-lg font-bold mr-4">
-                        A.O
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-heading font-semibold">Adebayo Ogundimu</h3>
-                        <p className="text-sm text-muted-foreground">Business Executive, Lagos</p>
-                      </div>
-                      <div className="ml-auto flex">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <blockquote className="text-lg italic text-muted-foreground mb-4">
-                      "I spilled coffee on my MacBook Pro during a crucial client presentation week. The laptop contained 5 years of business data with no recent backup. I was devastated. 
-                      Benextech not only recovered 100% of my data but also made my MacBook work better than before the incident. Their professionalism and expertise saved my business."
-                    </blockquote>
-                    
-                    <div className="text-sm text-primary font-medium">
-                      MacBook Pro Water Damage Recovery • Completed in 48 hours
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="text-center p-4 bg-primary/10 rounded-lg">
-                      <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                      <div className="text-sm text-muted-foreground">Data Recovered</div>
-                    </div>
-                    <div className="text-center p-4 bg-accent/10 rounded-lg">
-                      <div className="text-2xl font-bold text-accent mb-1">2 Years</div>
-                      <div className="text-sm text-muted-foreground">Warranty Provided</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Residential Solar Feature */}
-            <Card className="border-glow">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-lg font-bold text-background mr-4">
-                        M.O
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-heading font-semibold">Mrs. Obiageli</h3>
-                        <p className="text-sm text-muted-foreground">Homeowner, Abuja</p>
-                      </div>
-                      <div className="ml-auto flex">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <blockquote className="text-lg italic text-muted-foreground mb-4">
-                      "Our electricity bills were crushing our family budget at ₹150,000 monthly. Benextech designed and installed a 5kW solar system that reduced our bills to just ₹30,000. 
-                      The installation was professional, clean, and they educated us on maintenance. Six months later, we're still impressed with the performance."
-                    </blockquote>
-                    
-                    <div className="text-sm text-accent font-medium">
-                      5kW Residential Solar Installation • 3-day completion
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="text-center p-4 bg-accent/10 rounded-lg">
-                      <div className="text-2xl font-bold text-accent mb-1">80%</div>
-                      <div className="text-sm text-muted-foreground">Bill Reduction</div>
-                    </div>
-                    <div className="text-center p-4 bg-primary/10 rounded-lg">
-                      <div className="text-2xl font-bold text-primary mb-1">24/7</div>
-                      <div className="text-sm text-muted-foreground">Reliable Power</div>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Quality Metrics */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 slide-up">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Why Clients Choose <span className="text-primary">Benextech</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-glow text-center">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-heading font-semibold mb-2">Device Expertise</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Certified in Apple, Android, and PC technologies
-                </p>
-                <div className="text-2xl font-bold text-primary">99%</div>
-                <div className="text-xs text-muted-foreground">Success Rate</div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-glow text-center">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Battery className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-heading font-semibold mb-2">Solar Solutions</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Professional renewable energy installations
-                </p>
-                <div className="text-2xl font-bold text-accent">200+</div>
-                <div className="text-xs text-muted-foreground">Installations</div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-glow text-center">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-heading font-semibold mb-2">Data Recovery</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Advanced forensic data recovery services
-                </p>
-                <div className="text-2xl font-bold text-primary">95%</div>
-                <div className="text-xs text-muted-foreground">Recovery Rate</div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-glow text-center">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-heading font-semibold mb-2">Fast Service</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Quick turnaround times with quality results
-                </p>
-                <div className="text-2xl font-bold text-accent">48hr</div>
-                <div className="text-xs text-muted-foreground">Average Time</div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <Card className="border-glow">
-            <CardContent className="p-12 text-center">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Join Our <span className="text-accent">Satisfied Clients</span>
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                Experience the same professional service and exceptional results that our clients rave about. Your tech challenges deserve expert solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button className="btn-glow bg-primary hover:bg-primary/90" size="lg" asChild>
-                  <Link to="/contact">Get Started Today</Link>
-                </Button>
-                <Button variant="outline" className="btn-glow border-glow" size="lg" asChild>
-                  <a href="https://wa.me/2349074839789" target="_blank" rel="noopener noreferrer">
-                    Chat on WhatsApp
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>

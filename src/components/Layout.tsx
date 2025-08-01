@@ -26,9 +26,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-sm font-bold font-heading">B</span>
-              </div>
+              <img 
+                src="/lovable-uploads/86326427-5f0b-4bae-af05-a998125e1ad5.png" 
+                alt="Benextech Logo" 
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-xl font-heading font-bold">Benextech</span>
             </Link>
 
@@ -154,9 +156,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-bold font-heading">B</span>
-                </div>
+                <img 
+                  src="/lovable-uploads/86326427-5f0b-4bae-af05-a998125e1ad5.png" 
+                  alt="Benextech Logo" 
+                  className="w-8 h-8 object-contain"
+                />
                 <span className="text-xl font-heading font-bold">Benextech</span>
               </div>
               <p className="text-muted-foreground text-sm">

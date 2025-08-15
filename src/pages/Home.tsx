@@ -6,6 +6,7 @@ import {
   Wrench, 
   Zap, 
   Youtube, 
+  MapPin,
   Star, 
   Shield, 
   Clock, 
@@ -45,7 +46,7 @@ const Home = () => {
             Fast, certified, and reliable repairs for your devices — Apple, PC, Smartphones, Smart TVs, and more.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 flex-wrap">
             <Button 
               size="lg" 
               className="btn-glow bg-primary hover:bg-primary/90 text-lg px-8 py-6"
@@ -78,6 +79,18 @@ const Home = () => {
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-5 h-5 mr-2" />
                 Watch on YouTube
+              </a>
+            </Button>
+            
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="btn-glow bg-accent/20 hover:bg-accent/30 text-lg px-8 py-6"
+              asChild
+            >
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <MapPin className="w-5 h-5 mr-2" />
+                Google My Business
               </a>
             </Button>
           </div>

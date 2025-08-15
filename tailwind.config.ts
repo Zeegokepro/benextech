@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				heading: ['Orbitron', 'sans-serif'],
-				body: ['Inter', 'sans-serif'],
+				heading: ['Playfair Display', 'serif'],
+				body: ['Lato', 'sans-serif'],
+				accent: ['Cormorant Garamond', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

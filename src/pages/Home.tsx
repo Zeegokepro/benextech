@@ -72,8 +72,7 @@ const Home = () => {
             
             <Button 
               size="lg" 
-              variant="ghost" 
-              className="btn-glow-accent hover:bg-accent/10 text-lg px-8 py-6"
+              className="btn-glow btn-youtube text-lg px-8 py-6"
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">
@@ -84,8 +83,7 @@ const Home = () => {
             
             <Button 
               size="lg" 
-              variant="secondary" 
-              className="btn-glow bg-accent/20 hover:bg-accent/30 text-lg px-8 py-6"
+              className="btn-glow btn-google text-lg px-8 py-6"
               asChild
             >
               <a href="#" target="_blank" rel="noopener noreferrer">

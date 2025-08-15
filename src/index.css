@@ -48,6 +48,11 @@ All colors MUST be HSL.
     --shadow-accent-glow: 0 0 20px hsl(var(--glow-accent) / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Brand Colors */
+    --google-blue: 217 89% 61%; /* #4285F4 */
+    --whatsapp-green: 142 70% 49%; /* #25D366 */
+    --youtube-red: 0 100% 50%; /* #FF0000 */
+
     --sidebar-background: 210 11% 11%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 211 100% 50%;
@@ -125,6 +130,37 @@ All colors MUST be HSL.
 
   .btn-glow-accent:hover {
     box-shadow: var(--shadow-accent-glow);
+  }
+
+  /* Brand Button Styles */
+  .btn-google {
+    background-color: hsl(var(--google-blue));
+    color: white;
+  }
+  
+  .btn-google:hover {
+    background-color: hsl(var(--google-blue) / 0.9);
+    box-shadow: 0 0 20px hsl(var(--google-blue) / 0.4);
+  }
+
+  .btn-whatsapp {
+    background-color: hsl(var(--whatsapp-green));
+    color: white;
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: hsl(var(--whatsapp-green) / 0.9);
+    box-shadow: 0 0 20px hsl(var(--whatsapp-green) / 0.4);
+  }
+
+  .btn-youtube {
+    background-color: hsl(var(--youtube-red));
+    color: white;
+  }
+  
+  .btn-youtube:hover {
+    background-color: hsl(var(--youtube-red) / 0.9);
+    box-shadow: 0 0 20px hsl(var(--youtube-red) / 0.4);
   }
 
   /* Card Hover Effects */

@@ -24,7 +24,7 @@ const Clients = () => {
       category: "Solar",
       rating: 5,
       review: "Excellent solar installation. My electricity bills reduced by 80%. Professional and reliable team.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c0763dad?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format"
     },
     {
       id: 3,

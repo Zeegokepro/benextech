@@ -131,7 +131,7 @@ const Projects = () => {
   const categories = ["All", "MacBook Recovery", "Solar Install", "Phone Repair", "Data Recovery", "Enterprise Service", "Smart TV Setup"];
 
   return (
-    <div className="w-full bg-red-500">
+    <div className="w-full">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-background via-secondary/20 to-background">
         <div className="container mx-auto px-4">

@@ -8,42 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Benextech Dark Theme */
-    --background: 210 11% 11%; /* Charcoal Black #1C1C1E */
-    --foreground: 0 0% 100%; /* White #FFFFFF */
+    /* Updated Color Palette */
+    --background: 240 6% 12%; /* Charcoal Gray #1C1C1E */
+    --foreground: 210 17% 98%; /* Off-White #F8F9FA */
 
-    --card: 210 11% 15%; /* Slightly lighter than background */
-    --card-foreground: 0 0% 100%;
+    --card: 240 6% 15%; /* Slightly lighter than background */
+    --card-foreground: 210 17% 98%;
 
-    --popover: 210 11% 15%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 240 6% 15%;
+    --popover-foreground: 210 17% 98%;
 
     --primary: 211 100% 50%; /* Electric Blue #007BFF */
-    --primary-foreground: 0 0% 100%;
+    --primary-foreground: 210 17% 98%;
 
-    --secondary: 210 11% 20%; /* Darker card variant */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 158 64% 82%; /* Cool Mint #A7F3D0 */
+    --secondary-foreground: 240 6% 12%;
 
-    --muted: 210 11% 25%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 240 6% 25%;
+    --muted-foreground: 210 17% 70%;
 
-    --accent: 158 100% 50%; /* Neon Green #00FFAB */
-    --accent-foreground: 210 11% 11%;
+    --accent: 248 100% 69%; /* Cyber Purple #7B61FF */
+    --accent-foreground: 210 17% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 17% 98%;
 
-    --border: 210 11% 25%;
-    --input: 210 11% 20%;
+    --border: 240 6% 25%;
+    --input: 240 6% 20%;
     --ring: 211 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
     --glow-primary: 211 100% 50%;
-    --glow-accent: 158 100% 50%;
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(158 100% 50%));
-    --gradient-card: linear-gradient(145deg, hsl(210 11% 15%), hsl(210 11% 20%));
+    --glow-accent: 248 100% 69%;
+    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(248 100% 69%));
+    --gradient-card: linear-gradient(145deg, hsl(240 6% 15%), hsl(240 6% 20%));
     --shadow-glow: 0 0 20px hsl(var(--glow-primary) / 0.3);
     --shadow-accent-glow: 0 0 20px hsl(var(--glow-accent) / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

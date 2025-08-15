@@ -220,6 +220,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           
           <div className="mt-8 pt-8 border-t border-primary/30 text-center text-sm text-muted-foreground">
             <p>&copy; 2024 Benextech. All rights reserved. Built with expert hands, advanced tools, and trusted support.</p>
+            <p className="mt-2">CAC Registration: BENEXTECH CONNECT SYSTEMS - RC: 8661250</p>
           </div>
         </div>
       </footer>

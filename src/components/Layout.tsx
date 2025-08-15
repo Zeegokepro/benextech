@@ -163,7 +163,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 />
                 <span className="text-xl font-heading font-bold">Benextech</span>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-black text-sm">
                 Your one-stop hub for fixing Apple & Android devices, PCs, Smart TVs, and solar systems.
               </p>
             </div>
@@ -175,7 +175,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-black hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -185,7 +185,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             <div className="space-y-4">
               <h4 className="font-heading font-semibold">Services</h4>
-              <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+              <div className="flex flex-col space-y-2 text-sm text-black">
                 <span>Device Repairs</span>
                 <span>Solar Installation</span>
                 <span>Data Recovery</span>
@@ -195,7 +195,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             <div className="space-y-4">
               <h4 className="font-heading font-semibold">Contact</h4>
-              <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+              <div className="flex flex-col space-y-2 text-sm text-black">
                 <span>07036399365</span>
                 <span>08169711467</span>
                 <a 
@@ -218,7 +218,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-primary/30 text-center text-sm text-muted-foreground">
+          <div className="mt-8 pt-8 border-t border-primary/30 text-center text-sm text-black">
             <p>&copy; 2024 Benextech. All rights reserved. Built with expert hands, advanced tools, and trusted support.</p>
             <p className="mt-2">CAC Registration: BENEXTECH CONNECT SYSTEMS - RC: 8661250</p>
           </div>

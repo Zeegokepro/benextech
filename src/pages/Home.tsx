@@ -34,11 +34,15 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            We Fix, Upgrade, and Power Your Digital Life
+            Welcome to Benextech
           </h1>
           
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold mb-6 text-foreground">
+            Your Expert in Device Repair & Tech Solutions
+          </h2>
+          
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Benextech is your one-stop hub for fixing Apple & Android devices, PCs, Smart TVs, and solar systems — with expert hands, advanced tools, and trusted support.
+            Fast, certified, and reliable repairs for your devices — Apple, PC, Smartphones, Smart TVs, and more.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

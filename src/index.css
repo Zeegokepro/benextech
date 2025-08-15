@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Benextech Blue Theme */
-    --background: 217 89% 61%; /* Google Blue #4285F4 */
+    /* Benextech Dark Theme */
+    --background: 210 11% 11%; /* Charcoal Black #1C1C1E */
     --foreground: 0 0% 100%; /* White #FFFFFF */
 
     --card: 210 11% 15%; /* Slightly lighter than background */

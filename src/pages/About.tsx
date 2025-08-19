@@ -15,10 +15,10 @@ const About = () => {
                 About <span className="text-primary">Benextech</span>
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
-                Founded with a passion for technology and commitment to excellence, Benextech has become the go-to destination for premium tech repair and solar solutions across Nigeria.
+                Benextech is a trusted Tech Entrepreneur / Repair & Service hub providing complete solutions for gadgets, computers, and energy systems.
               </p>
               <p className="text-muted-foreground mb-8">
-                Our team of certified technicians combines years of experience with cutting-edge tools to deliver unmatched service quality for individuals and businesses alike.
+                Our mission is to keep your devices and systems running at their best through certified expertise, reliable service, and modern technology solutions.
               </p>
               <Button className="btn-glow bg-primary hover:bg-primary/90" size="lg" asChild>
                 <Link to="/services">Explore Our Services</Link>

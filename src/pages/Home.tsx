@@ -39,11 +39,11 @@ const Home = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold mb-6 text-foreground">
-            Apple devices | PC | Smartphone | Gadgets | Smart TV | Solar Energy System
+            Apple devices | PC | Smart phone | Gadgets | Smart TV and Solar Energy System
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Is your DEVICE (Apple, PC, Smartphone, Gadget, Smart TV, or Solar Energy System) ACTING UP? Don't worry, we've got you covered. Our expert technicians are here to provide top-notch repair services. Whether it's hardware issues or software glitches, we're here to diagnose and fix them all!
+            Is your DEVICE ---- Apple or PC, Smartphone, Gadgets, Smart TV and Solar Energy System --- ACTING UP? Don't worry, we've got you covered. Our expert technicians are here to provide top-notch repair service's. Whether it's hardware issues, or software glitches, we're here to diagnose and fix them all!
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 flex-wrap">
@@ -113,7 +113,7 @@ const Home = () => {
                 <Shield className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-semibold mb-3">✅ Certified Technicians</h3>
                 <p className="text-muted-foreground">
-                  Our team consists of certified experts who know the job inside out.
+                  Our team consists of certified experts who know the jobs inside and out.
                 </p>
               </CardContent>
             </Card>
@@ -123,7 +123,7 @@ const Home = () => {
                 <Clock className="w-12 h-12 text-accent mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-semibold mb-3">✅ Quick Turnaround</h3>
                 <p className="text-muted-foreground">
-                  Speedy repairs so you can get back to work or play in no time.
+                  We aim for speedy repairs, so you can get back to work or play in no time.
                 </p>
               </CardContent>
             </Card>
@@ -143,7 +143,7 @@ const Home = () => {
                 <Star className="w-12 h-12 text-accent mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-semibold mb-3">✅ Customer Satisfaction</h3>
                 <p className="text-muted-foreground">
-                  We're dedicated to ensuring you're 100% satisfied.
+                  We're dedicated to ensuring you're 100% satisfied with our work.
                 </p>
               </CardContent>
             </Card>
@@ -167,9 +167,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Settings className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🔍 Diagnostics</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🔍 Diagnostics and Troubleshooting</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Diagnostics and Troubleshooting
+                  Complete system analysis to identify and resolve complex technical issues efficiently.
                 </p>
               </CardContent>
             </Card>
@@ -177,9 +177,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Shield className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🦠 Virus Removal</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🦠 Virus and Malware Removal</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Virus and Malware Removal
+                  Comprehensive security cleanup and protection setup to keep your devices safe.
                 </p>
               </CardContent>
             </Card>
@@ -187,9 +187,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Wrench className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🖥️ Hardware Repairs</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🖥️ Hardware Repairs and Upgrades</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Hardware Repairs and Upgrades
+                  Expert repair and enhancement of all hardware components for optimal performance.
                 </p>
               </CardContent>
             </Card>
@@ -199,7 +199,7 @@ const Home = () => {
                 <Database className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-lg font-heading font-semibold mb-2">💽 Data Recovery</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Professional Data Recovery Services
+                  Advanced data retrieval from damaged or corrupted storage devices with high success rates.
                 </p>
               </CardContent>
             </Card>
@@ -207,9 +207,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Laptop className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">💻 OS Installation</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">💻 Operating System Installation and Optimization</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Operating System Installation and Optimization
+                  Fresh OS installation, updates, and performance tuning for maximum efficiency.
                 </p>
               </CardContent>
             </Card>
@@ -217,9 +217,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Smartphone className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">📱 Mobile Repairs</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">📱 Smartphone and Laptop Repairs</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Smartphone and Laptop Repairs
+                  Comprehensive repair services for mobile devices and portable computers.
                 </p>
               </CardContent>
             </Card>
@@ -227,9 +227,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Tv className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">📺 Smart TV Repairs</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">📺 Smart TV Repair</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Professional Smart TV Repairs
+                  Expert repair services for all smart TV brands and display technologies.
                 </p>
               </CardContent>
             </Card>
@@ -237,9 +237,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Battery className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🔋 Solar Systems</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🔋 Solar Energy System Installation and Repair</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Solar Energy System Installation and Repairs
+                  Complete solar power solutions including installation, maintenance, and repair services.
                 </p>
               </CardContent>
             </Card>
@@ -252,10 +252,13 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 slide-up">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Our <span className="text-primary">Expertise</span>
+              <span className="text-primary">TECH ENTREPRENEUR / TECHNICIAN</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We specialize in comprehensive solutions for all your tech needs.
+            <h3 className="text-2xl md:text-3xl font-heading font-semibold mb-4 text-accent">
+              iFix And iSell
+            </h3>
+            <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-6">
+              MacBook * iPhone * PC * Laptop * Android smartphone * Smart TV * Solar Energy System * Parts *
             </p>
           </div>
 
@@ -263,9 +266,9 @@ const Home = () => {
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
                 <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Apple Devices</h3>
+                <h3 className="text-xl font-heading font-semibold mb-3">* Apple devices Technician</h3>
                 <p className="text-muted-foreground">
-                  MacBook, iPhone, iMac, iWatch, and all Apple ecosystem devices
+                  MacBook, iPhone, iMac, iWatch, and all Apple ecosystem devices repair and service
                 </p>
               </CardContent>
             </Card>
@@ -273,9 +276,9 @@ const Home = () => {
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
                 <Laptop className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Windows PC & Laptops</h3>
+                <h3 className="text-xl font-heading font-semibold mb-3">* Windows Computer technician</h3>
                 <p className="text-muted-foreground">
-                  Complete PC solutions, upgrades, and performance optimization
+                  Complete PC solutions, upgrades, and performance optimization services
                 </p>
               </CardContent>
             </Card>
@@ -283,9 +286,9 @@ const Home = () => {
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
                 <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Android Smartphones</h3>
+                <h3 className="text-xl font-heading font-semibold mb-3">* Android Smartphone Technician</h3>
                 <p className="text-muted-foreground">
-                  All Android brands and models with expert repair services
+                  All Android brands and models with expert repair and service solutions
                 </p>
               </CardContent>
             </Card>
@@ -293,9 +296,9 @@ const Home = () => {
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
                 <Tv className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Smart TV Repairs</h3>
+                <h3 className="text-xl font-heading font-semibold mb-3">* TV Technician</h3>
                 <p className="text-muted-foreground">
-                  Professional repairs for all smart TV brands and technologies
+                  Professional repairs for all smart TV brands and display technologies
                 </p>
               </CardContent>
             </Card>
@@ -303,22 +306,206 @@ const Home = () => {
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
                 <Battery className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Solar Energy Systems</h3>
+                <h3 className="text-xl font-heading font-semibold mb-3">* Solar energy system service Technician</h3>
                 <p className="text-muted-foreground">
-                  Installation, repair, and maintenance of solar power systems
+                  Installation, repair, and maintenance of solar power systems and inverters
                 </p>
               </CardContent>
             </Card>
 
             <Card className="card-hover border-glow">
               <CardContent className="p-6 text-center">
-                <Wrench className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-heading font-semibold mb-3">Parts Dealership</h3>
+                <Laptop className="w-12 h-12 text-accent mx-auto mb-4" />
+                <h3 className="text-xl font-heading font-semibold mb-3">* Windows Computer[Laptops] Technician</h3>
                 <p className="text-muted-foreground">
-                  Apple & PC parts dealership with genuine components
+                  Specialized laptop repair and maintenance services for all Windows systems
                 </p>
               </CardContent>
             </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6 text-center">
+                <Wrench className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-heading font-semibold mb-3">* PC and Apple parts dealer</h3>
+                <p className="text-muted-foreground">
+                  Genuine Apple & PC parts dealership with authentic components and accessories
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Breakdown of What We Do Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 slide-up">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Breakdown of What We <span className="text-primary">Do</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Comprehensive breakdown of our specialized repair and service offerings across all device categories.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Laptop className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Computers Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Complete desktop computer repair and maintenance solutions</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Laptop className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* MacBooks Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Specialized MacBook repair and restoration services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Laptop className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* iMac and Mac mini repair Service</h3>
+                <p className="text-muted-foreground text-sm">Expert repair services for all Mac desktop models</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Tv className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* TV Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Professional TV repair for all brands and technologies</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Battery className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Solar Energy System Installation</h3>
+                <p className="text-muted-foreground text-sm">Complete solar power system design and installation</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Battery className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Solar Energy System Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Expert repair and maintenance of solar power systems</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Zap className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Solar Inverters Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Specialized inverter repair and replacement services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Smartphone className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* iPhone Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Comprehensive iPhone repair for all models</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Smartphone className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* iwatch Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Apple Watch repair and screen replacement services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Smartphone className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Apple gadgets/devices Repair Service</h3>
+                <p className="text-muted-foreground text-sm">Complete Apple ecosystem device repair solutions</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Computer Maintenance</h3>
+                <p className="text-muted-foreground text-sm">Regular maintenance and optimization services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* System Recovery</h3>
+                <p className="text-muted-foreground text-sm">Complete system restoration and recovery services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Database className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Data Recovery Service</h3>
+                <p className="text-muted-foreground text-sm">Professional data retrieval from damaged devices</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Forgotten Password</h3>
+                <p className="text-muted-foreground text-sm">Password recovery and reset services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Windows Re-installation</h3>
+                <p className="text-muted-foreground text-sm">Fresh Windows installation and setup services</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Computer Setup</h3>
+                <p className="text-muted-foreground text-sm">Complete computer configuration and optimization</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Wrench className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Software and Hardware Repair</h3>
+                <p className="text-muted-foreground text-sm">Comprehensive software and hardware solutions</p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow">
+              <CardContent className="p-6">
+                <Shield className="w-10 h-10 text-accent mb-4" />
+                <h3 className="text-lg font-heading font-semibold mb-2">* Viruses Removal</h3>
+                <p className="text-muted-foreground text-sm">Complete malware and virus elimination services</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground mb-6">
+              📞 Contact us now for a free consultation or to schedule a repair!<br />
+              Your Device or Gadget's health is our priority.
+            </p>
+            <Button 
+              size="lg" 
+              className="btn-glow bg-primary hover:bg-primary/90"
+              asChild
+            >
+              <Link to="/contact">Get Free Consultation</Link>
+            </Button>
           </div>
         </div>
       </section>

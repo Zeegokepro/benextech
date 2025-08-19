@@ -35,7 +35,7 @@ const Home = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Welcome to Benextech [iFix] 👨‍💻🔧
+            Welcome to Benextech [iFix]
           </h1>
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-semibold mb-6 text-foreground">

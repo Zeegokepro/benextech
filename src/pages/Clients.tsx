@@ -142,6 +142,438 @@ const Clients = () => {
       rating: 5,
       review: "Solar panel installation was done with precision. Already seeing savings on electricity bills.",
       image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 16,
+      name: "Eddy Jr",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Great experience! The guy is truthful, and he knows his work. My high end laptop damaged by water. He gave me so many options. And even helped me recover all my files. If you have any issue with your system and phones as well, check him out. You will thank me later.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 17,
+      name: "Emmanuel Ikechukwu",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I got my PC screen fixed and added an SSD here, and they did an excellent job. Everything is working perfectly now. The service was professional, quick, and reliable. Highly recommend Benextech for anyone needing computer repairs or upgrades.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 18,
+      name: "Iseoluwa",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 4,
+      review: "The guy is good, He fixed my system working good and fine, but their down side is that u always call the boss for an appointment, he is always busy with outside jobs. i give him four stars anyways. However they are good at what they do shal if it comes to rating.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 19,
+      name: "Elizabeth Onyeniche",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I had an issue with my iPhone's charging port and got it fixed here. The service was quick and professional, and my phone is working perfectly now, no issue at all. I highly recommend them!",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 20,
+      name: "daniel abiola",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "these fixed my macbook A1235, 12 inch that i thought was a write off due to how it went off, heat up terribly and just went dead on me while working. when i brought it in i didnt believe it will still work buy the guy there just told me to. give a try humbly and by the next day he whatsapp me of the video of my macbook back to life. im so grateful to benextech, they are awesome abd know their job. if yo are around ajah area of lagos and have a computer issues, trust. to call them up, they can fix it.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 21,
+      name: "Marianne Favi",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I thought my Samsung phone was dead when it fell from my hand at a high level. A friend told me about these guys and I just reluctantly decided to try them and I'm glad I did. They fixed it and my phone working again. These guys are the best. I salute. You guys are doing well. I recommend 1000%.",
+      image: "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 22,
+      name: "Ayomide Eniola",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Their service is best around the area, these guys iPad 10th gen that a friend sat on mistakenly. Both my screen and touchpad smashed into pieces and frame bent backwards, took it to them and he bought parts from his connection in china,took three weeks, but after the waiting mt iPad back to life again, now it working perfectly . Thumbs up guys. Mr Benextech",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 23,
+      name: "Barak Oqua",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Benextech located along Ajah road in Lekki Lagos offers repair services for Apple devices including iPads.They provide both hardware and software solutions for apple products. However I sent my iPad to them from Calaba Cross Rivers State to Lagos after i saw their page online and was satisfied with feedbacks. Now my job has been done and sent back to me, my iPad working like new again. Thanks guys @benextech",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 24,
+      name: "Anighemabhar Matthew",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "The professionalist baba oh I greet thanks man for the good job u did for me, the best repair guy at ajah so far.... I beg make unah help me patronize am, but my observation be say u no dey like attend to small job😒 like mine, but aside that the guy good. Thanks man",
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 25,
+      name: "Ambrycakes'n'pastries",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "Am so super excited i came across this guys profile. And after they were done with my phone and i testing it, I finally believe what my friend told about these guys. Them sabi their work. Thumbs up to u benex Tech, you guys too much.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 26,
+      name: "Orlu Steadfast",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "these guys at benextech workspace are the best, friendly and most importantly know is job. thumbs up guys. you are welcome to patronise them. you won't regret it, sure best.",
+      image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 27,
+      name: "Johnson Ugo Daniel",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I had the most wonderful experience today! I witnessed diligence and thoroughness in display. Highly recommended. Cheers",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 28,
+      name: "Joseph Nwokotubo",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "Reliable and trust worthy, the fixed my iPhone 14pm that methylated spirt badly pouted on and started tripping off. Send it through logistics to Benextech and everything working perfectly now, no issues of any sort. Thanks guys, you really deserve the 5 stars.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 29,
+      name: "REBECCA ORISEH",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I got back all my lost files after a system crash. They're Best phone and computers repair guy around Ajah.... This guy solved my phone. Issue without much stress. Taken to other places and they couldn't. Thumbs up to benextech.",
+      image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 30,
+      name: "Adebola Elizabeth Damilola Adeyemi",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I was tired of getting my phone fixed by engineers in Ajah, so I searched for an engineer near me. Google suggested him, and I decided to give him a try. I have no regrets—I highly recommend him",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format"
+    },
+    {
+      id: 31,
+      name: "Ruth Nwachukwu",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I enjoyed a very seamless experience with this brand. The price was affordable and the customer service was top notch.. y'all should plan to patronize this brand and get value for your for money",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 32,
+      name: "Delivery Addo",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Mr Benex ... I salute thanks for the repair man... Y'all should rush and give this man a call today, him Sabi e work...",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 33,
+      name: "Emmanuel Olaosebikan",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Wish I could double the stars. I love his craft. He fixed my friend's MBP 2013 15\" GPU perfectly. Gave adequate feedback and he didn't delay at all. He was communicating at all times and he did a great job. I highly recommend him. He's a fantastic Apple expert.!",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 34,
+      name: "No Hitch Web",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "My macbook froze and suddenly went off. He took his time, diagnosed the issue, found the fault, fixed it and I am making this review with the said Macbook. Thank you BenexTech, thank you so much.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 35,
+      name: "Chibuzo Gabriel",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I brought in my iPhone 11 that just stop charging😫 and I tried all solutions online to fix but to no avail, it took BENEXTECH just 30 minutes to have it working again, I thought it was going to take a day or two but he did it and it working perfectly for just 30 minutes. I'm so impressed and I recommend these guys, you can and should patronize them. You will be happy when leaving. One love",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 36,
+      name: "Nwocha Adim",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Blessing is a diligent and professional technician. My MacBook Pro suddenly developed a fault and wouldn't come on again. Blessing took his time with the help of some professional tooling in diagnosing the issue and did a thorough fix. Highly recommend",
+      image: "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 37,
+      name: "Glory Usman",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I took my phone to benextech hoping to get a perfect job done considering repairer out there spoiling people phones, had a bad experience ones, but this guy did my job and my phone looking like new, nothing to tell it was fixed. And my phone perfectly working now. I will bring my laptop to him too as I trust he will do a good job. Thanks benextech. 100%",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 38,
+      name: "Zayden Adebayo",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "They also fix my phone screen perfectly, no errors, just like new. Their service is the best in the area. Benextech.",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 39,
+      name: "Ajays Gate Global Ltd",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "benextech are great guys, welcoming and always paying attention to details. i brought in my water damanged Macbook pro that got so bad that it didnt come on anymore. these guys fixed it and its working perfectly now, im really exited and happy. i recommend these guys. good job guys.",
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 40,
+      name: "Edidot School",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "They help fix the screen of the school phone which was so bad we couldn't use for daily activities. Thanks @benextech for a good well done job.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 41,
+      name: "Ebenezer Oladutemu",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "My MacBook was diagnosed to have a faulty battery which affected the board. The board and battery were fixed well!💯. Man knows his onions. Great service..",
+      image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 42,
+      name: "Oluwatosin Taiwo",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Great job on fixing my laptop! I really appreciate your professionalism and the time you took to explain everything. Thanks again",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 43,
+      name: "Michael Ikharo",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I had an amazing experience getting my macbook SSD and OS fixed, the team was knowledgeable and quick to resolve the issue. I highly recommend their service for any Mac troubles!",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 44,
+      name: "Beta Developer",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Hardly leave reviews but leaving a review in this case is a must. I was really stressed with my laptop being stocked on loading but taking it to Benextech was definitely the best choice I made cause they fixed it and really saved me from having to buy a new one",
+      image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 45,
+      name: "Gideon Ogbonna",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "best apple devices and gadgets stores in lekki, i went there to fix my macbook 2013 charging port and got a charger and ever since my macbook working perfectly....these guys the best. i recommend them. thankz benextech.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 46,
+      name: "Joseph Nwokotubo",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I thought my ASUS ROG gaming laptop was gone when I suddenly smelled smoke one day, and it switched off. I had given up on the laptop until I stumbled upon Benextech, which is closer to where I live. I decided to give them a shot and sent the laptop over. Despite it being a motherboard issue that they could have easily extorted me for, they were honest and told me exactly what was wrong with the board, then gave me a very fair price. They communicated with me daily and sent the laptop back in excellent condition. If you live around Lekki/Ajah and need any repair service for your phone or laptop, whether it be Apple, Android, or Windows, I wholeheartedly recommend Benextech!",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 47,
+      name: "cher blossom",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "guys i invite you all to patronise the guy as they are the best around this axis... they fixed my computer screen issue and my samsung galaxy s7edge and both devies working perfectly... i didn't even reconized my samsung when i saw it at first, thought it was someone elses phone, lolzzz. this guys are the best at what they do. i will surely petronise them again if i have any issue with my device in future.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 48,
+      name: "Patrick Emmanuel",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Best store around Ajah/sangotedo area for apple Macbook repair, this guys the best as thet were able to bring my macbook back to life after like two try from other engineers within the area. Thanks benextech for bringing my Macbook back to life and working perfectly. You too much.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 49,
+      name: "Evelyn carter",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "fixed my hp elitebook 360 1030 G2 keyboard issue on time for my appointment and working perfectly now. I appreciate. thanks benextech",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 50,
+      name: "Olufemi Oredein",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 4,
+      review: "I bought my MacBook charger from Benextech last year and it has been working very well This month, I also replaced my MacBook battery and I can say the quality of service is still the same! Excellent customer service as well!",
+      image: "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 51,
+      name: "Chizy Desmond",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "He is the best at what he does, his services are topnotch, and most reliable. He delivers with good results. Trust him with all you gadgets. I wish I can give him a million stars 🌟 🌟 🌟 🌟 🌟",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 52,
+      name: "Trishawnary Thylacine",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "This guy is truly an expert,like unbelievable...i brought my macbook pro to his office for repair...at first i was not confortable but when i saw the job done i was like wow....i will advice u to take ur jobs to him.",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 53,
+      name: "Twebbies",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "I had my dell xps 13 repaired at benextech in lekki lagos.The screen had a bad pixel,and they were able to fix it quickly and efficently.The technician was very knowledgeable and friendly ,and he explain the repair process clearly.The price was reasonable,and i was impressed with the quality of the work.I would definitely recommend Benextech for gadget repairs in lagos.",
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 54,
+      name: "Kemi Kafayat",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "The guy knows the job well, fixed my phone screen and my son school laptop 💻perfect. I recommend benextech for you computers and smart phones and gadgets. I will tell my friends about this place.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 55,
+      name: "Sarah Aborowa",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "The best tech service store within Ajah/Lekki area,they fixed and perfectly my Samsung tab that other service centre told me could not be fixed. I recommend benextech to anyone around this axis looking for a reliable tech store to fix their devices and gadgets",
+      image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 56,
+      name: "Adamson Abideen",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I brought my iPhone 15 promax to benextech for screen solution...within 1h it was fixed easily 🙂🙂...this company are doing good job...try them !!!",
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 57,
+      name: "Lilias Keyan",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "Mr Blessing fixed my Samsung A02s screen perfectly and so far no soft touch issues. I recommend Benextech 110%.",
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 58,
+      name: "Maureen Udemeh",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "this guy is superb i mean he us a genius...just fixedmy Samsung a21s at his office.....nd it working perfectly",
+      image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 59,
+      name: "Benedicta Oyobolo",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "Thank you so much Benex Tech for fixing my Samsung phone quickly and stress free, guys feel free to patronise him for all kinds of gadget repairs, he is tested and trusted.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 60,
+      name: "Faith Adesogan",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "Their service is top notch and more than satisfactory, in short perfect! Even their hospitality is highly commendable and admirable. I recommend Benextech at all times, it's a brand you can trust!!!",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 61,
+      name: "Tochukwu Paul",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Great guy!! Fixed my macbook and now it's working well. I highly recommend Benex any day, any time. 5 Star.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 62,
+      name: "Pearl Maryj",
+      location: "Lagos",
+      category: "Laptop",
+      rating: 5,
+      review: "Very amazing 🙌🏾 he actually knows everything about gadgets. 100% will recommend. He revived my Mac immediately I found him after one year of trying other and actually given up.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      id: 63,
+      name: "Nwadiuto Obuekwe",
+      location: "Lagos",
+      category: "Phone",
+      rating: 5,
+      review: "I got my bad screen replaced at benextech and I must say I really enjoyed a very good customer service. Benextech prices are cheap and affordable I would really recommend you try him out.",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
     }
   ];
 

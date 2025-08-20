@@ -42,7 +42,7 @@ const Clients = () => {
       category: "Phone",
       rating: 4,
       review: "Quick Samsung repair service. Screen replacement done within hours. Great customer service.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b05e?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 5,
@@ -150,7 +150,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Great experience! The guy is truthful, and he knows his work. My high end laptop damaged by water. He gave me so many options. And even helped me recover all my files. If you have any issue with your system and phones as well, check him out. You will thank me later.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 17,
@@ -159,7 +159,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "I got my PC screen fixed and added an SSD here, and they did an excellent job. Everything is working perfectly now. The service was professional, quick, and reliable. Highly recommend Benextech for anyone needing computer repairs or upgrades.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 18,
@@ -168,7 +168,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 4,
       review: "The guy is good, He fixed my system working good and fine, but their down side is that u always call the boss for an appointment, he is always busy with outside jobs. i give him four stars anyways. However they are good at what they do shal if it comes to rating.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 19,
@@ -177,7 +177,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "I had an issue with my iPhone's charging port and got it fixed here. The service was quick and professional, and my phone is working perfectly now, no issue at all. I highly recommend them!",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 20,
@@ -186,7 +186,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "these fixed my macbook A1235, 12 inch that i thought was a write off due to how it went off, heat up terribly and just went dead on me while working. when i brought it in i didnt believe it will still work buy the guy there just told me to. give a try humbly and by the next day he whatsapp me of the video of my macbook back to life. im so grateful to benextech, they are awesome abd know their job. if yo are around ajah area of lagos and have a computer issues, trust. to call them up, they can fix it.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 21,
@@ -285,7 +285,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "I enjoyed a very seamless experience with this brand. The price was affordable and the customer service was top notch.. y'all should plan to patronize this brand and get value for your for money",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 32,
@@ -294,7 +294,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Mr Benex ... I salute thanks for the repair man... Y'all should rush and give this man a call today, him Sabi e work...",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 33,
@@ -303,7 +303,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Wish I could double the stars. I love his craft. He fixed my friend's MBP 2013 15\" GPU perfectly. Gave adequate feedback and he didn't delay at all. He was communicating at all times and he did a great job. I highly recommend him. He's a fantastic Apple expert.!",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 34,
@@ -312,7 +312,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "My macbook froze and suddenly went off. He took his time, diagnosed the issue, found the fault, fixed it and I am making this review with the said Macbook. Thank you BenexTech, thank you so much.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1474293479377-8beba4ba4fb5?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 35,
@@ -321,7 +321,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "I brought in my iPhone 11 that just stop charging😫 and I tried all solutions online to fix but to no avail, it took BENEXTECH just 30 minutes to have it working again, I thought it was going to take a day or two but he did it and it working perfectly for just 30 minutes. I'm so impressed and I recommend these guys, you can and should patronize them. You will be happy when leaving. One love",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1507101105822-7472b28e22ac?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 36,
@@ -411,7 +411,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "best apple devices and gadgets stores in lekki, i went there to fix my macbook 2013 charging port and got a charger and ever since my macbook working perfectly....these guys the best. i recommend them. thankz benextech.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 46,
@@ -420,7 +420,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "I thought my ASUS ROG gaming laptop was gone when I suddenly smelled smoke one day, and it switched off. I had given up on the laptop until I stumbled upon Benextech, which is closer to where I live. I decided to give them a shot and sent the laptop over. Despite it being a motherboard issue that they could have easily extorted me for, they were honest and told me exactly what was wrong with the board, then gave me a very fair price. They communicated with me daily and sent the laptop back in excellent condition. If you live around Lekki/Ajah and need any repair service for your phone or laptop, whether it be Apple, Android, or Windows, I wholeheartedly recommend Benextech!",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 47,
@@ -429,7 +429,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "guys i invite you all to patronise the guy as they are the best around this axis... they fixed my computer screen issue and my samsung galaxy s7edge and both devies working perfectly... i didn't even reconized my samsung when i saw it at first, thought it was someone elses phone, lolzzz. this guys are the best at what they do. i will surely petronise them again if i have any issue with my device in future.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 48,
@@ -438,7 +438,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Best store around Ajah/sangotedo area for apple Macbook repair, this guys the best as thet were able to bring my macbook back to life after like two try from other engineers within the area. Thanks benextech for bringing my Macbook back to life and working perfectly. You too much.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 49,
@@ -447,7 +447,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "fixed my hp elitebook 360 1030 G2 keyboard issue on time for my appointment and working perfectly now. I appreciate. thanks benextech",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 50,
@@ -456,7 +456,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 4,
       review: "I bought my MacBook charger from Benextech last year and it has been working very well This month, I also replaced my MacBook battery and I can say the quality of service is still the same! Excellent customer service as well!",
-      image: "https://images.unsplash.com/photo-1485875437342-9b39470b3d95?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 51,
@@ -465,7 +465,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "He is the best at what he does, his services are topnotch, and most reliable. He delivers with good results. Trust him with all you gadgets. I wish I can give him a million stars 🌟 🌟 🌟 🌟 🌟",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 52,
@@ -474,7 +474,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "This guy is truly an expert,like unbelievable...i brought my macbook pro to his office for repair...at first i was not confortable but when i saw the job done i was like wow....i will advice u to take ur jobs to him.",
-      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 53,
@@ -483,7 +483,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "I had my dell xps 13 repaired at benextech in lekki lagos.The screen had a bad pixel,and they were able to fix it quickly and efficently.The technician was very knowledgeable and friendly ,and he explain the repair process clearly.The price was reasonable,and i was impressed with the quality of the work.I would definitely recommend Benextech for gadget repairs in lagos.",
-      image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 54,
@@ -537,7 +537,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "Thank you so much Benex Tech for fixing my Samsung phone quickly and stress free, guys feel free to patronise him for all kinds of gadget repairs, he is tested and trusted.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 60,
@@ -546,7 +546,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "Their service is top notch and more than satisfactory, in short perfect! Even their hospitality is highly commendable and admirable. I recommend Benextech at all times, it's a brand you can trust!!!",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 61,
@@ -555,7 +555,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Great guy!! Fixed my macbook and now it's working well. I highly recommend Benex any day, any time. 5 Star.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 62,
@@ -564,7 +564,7 @@ const Clients = () => {
       category: "Laptop",
       rating: 5,
       review: "Very amazing 🙌🏾 he actually knows everything about gadgets. 100% will recommend. He revived my Mac immediately I found him after one year of trying other and actually given up.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: 63,
@@ -573,7 +573,7 @@ const Clients = () => {
       category: "Phone",
       rating: 5,
       review: "I got my bad screen replaced at benextech and I must say I really enjoyed a very good customer service. Benextech prices are cheap and affordable I would really recommend you try him out.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+      image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=150&h=150&fit=crop&crop=face"
     }
   ];
 

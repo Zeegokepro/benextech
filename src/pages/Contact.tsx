@@ -282,6 +282,18 @@ const Contact = () => {
                         Professional repair facility with latest equipment<br />
                         Free parking and comfortable waiting area
                       </p>
+                      <div className="mt-3 pt-3 border-t border-border">
+                        <h4 className="font-medium mb-2 text-primary">Email Support</h4>
+                        <a 
+                          href="mailto:support@benextech.com" 
+                          className="text-sm text-accent hover:text-primary transition-colors font-medium"
+                        >
+                          support@benextech.com
+                        </a>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          For non-urgent inquiries and quotes
+                        </p>
+                      </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -199,6 +199,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <span>07036399365</span>
                 <span>08169711467</span>
                 <a 
+                  href="mailto:support@benextech.com" 
+                  className="hover:text-primary transition-colors"
+                >
+                  support@benextech.com
+                </a>
+                <a 
                   href="https://wa.me/2349074839789" 
                   className="hover:text-primary transition-colors"
                   target="_blank"

@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-background">
       {/* Sticky Navigation */}
-      <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/30">
+      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/30">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
@@ -29,22 +29,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <img 
                 src="/lovable-uploads/04d35137-6505-4b66-bea6-db184715cbc2.png" 
                 alt="Benextech Logo" 
-                className="w-12 h-12 object-contain"
+                className="w-16 h-16 object-contain"
               />
-              <span className="text-xl font-heading font-bold">Benextech</span>
+              <span className="text-xl font-heading font-bold text-white">Benextech</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`relative text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                    isActivePath(link.path) 
-                      ? "text-primary" 
-                      : "text-muted-foreground"
-                  }`}
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`relative text-sm font-medium transition-colors duration-300 hover:text-primary ${
+                      isActivePath(link.path) 
+                        ? "text-primary" 
+                        : "text-white"
+                    }`}
                 >
                   {link.name}
                   {isActivePath(link.path) && (
@@ -105,7 +105,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
                       isActivePath(link.path) 
                         ? "text-primary" 
-                        : "text-muted-foreground"
+                        : "text-white"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -159,7 +159,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img 
                   src="/lovable-uploads/04d35137-6505-4b66-bea6-db184715cbc2.png" 
                   alt="Benextech Logo" 
-                  className="w-12 h-12 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
                 <span className="text-xl font-heading font-bold">Benextech</span>
               </div>

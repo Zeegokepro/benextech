@@ -27,7 +27,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <img 
-                src="/lovable-uploads/04d35137-6505-4b66-bea6-db184715cbc2.png" 
+                src="/lovable-uploads/de28e917-8735-47b0-9916-488b39a70165.png" 
                 alt="Benextech Logo" 
                 className="w-16 h-16 object-contain"
               />
@@ -157,7 +157,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/lovable-uploads/04d35137-6505-4b66-bea6-db184715cbc2.png" 
+                  src="/lovable-uploads/de28e917-8735-47b0-9916-488b39a70165.png" 
                   alt="Benextech Logo" 
                   className="w-16 h-16 object-contain"
                 />

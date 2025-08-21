@@ -19,7 +19,7 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/new-hero-bg.jpg";
+const heroImage = "/lovable-uploads/7946b20c-058f-4327-91ec-1af156d63960.png";
 
 const Home = () => {
   return (

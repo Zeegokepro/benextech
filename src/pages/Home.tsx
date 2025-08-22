@@ -42,7 +42,7 @@ const Home = () => {
             Apple devices | PC | Smartphone | Gadgets | Smart TV | Solar Energy System | Training
           </h2>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black mb-8 max-w-3xl mx-auto font-medium">
             Is your DEVICE (Apple, PC, Smartphone, Gadget, Smart TV, or Solar Energy System) ACTING UP? Don't worry, we've got you covered. Our expert technicians are here to provide top-notch repair services. Whether it's hardware issues or software glitches, we're here to diagnose and fix them all!
           </p>
 

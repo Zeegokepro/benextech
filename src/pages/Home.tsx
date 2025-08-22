@@ -163,53 +163,13 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Settings className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🔍 Diagnostics</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🔍 Diagnostics & Troubleshooting</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Diagnostics and Troubleshooting
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover border-glow group">
-              <CardContent className="p-6">
-                <Shield className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🦠 Virus Removal</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Virus and Malware Removal
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover border-glow group">
-              <CardContent className="p-6">
-                <Wrench className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🖥️ Hardware Repairs</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Hardware Repairs and Upgrades
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover border-glow group">
-              <CardContent className="p-6">
-                <Database className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">💽 Data Recovery</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Professional Data Recovery Services
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover border-glow group">
-              <CardContent className="p-6">
-                <Laptop className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">💻 OS Installation</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Operating System Installation and Optimization
+                  Advanced testing with up-to-date tools to accurately detect and identify device issues.
                 </p>
               </CardContent>
             </Card>
@@ -217,9 +177,49 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Smartphone className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">📱 Mobile Repairs</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🍎 Apple Device Repair</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Smartphone and Laptop Repairs
+                  Professional repair service for all Apple devices and gadgets.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow group">
+              <CardContent className="p-6">
+                <Users className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-heading font-semibold mb-2">🎓 Training [Apprenticeship]</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Learn real tech repair skills, hands-on, with Benextech.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow group">
+              <CardContent className="p-6">
+                <Wrench className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-heading font-semibold mb-2">🔧 Hardware and Software Repair</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Smart fixes that restore performance and keep your devices at their best.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow group">
+              <CardContent className="p-6">
+                <Laptop className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-heading font-semibold mb-2">💻 Windows PC & Laptop Repair</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Expert repair and upgrades for all types of Windows computers.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow group">
+              <CardContent className="p-6">
+                <Smartphone className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-heading font-semibold mb-2">📱 Mobile Repair</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  We repair all smartphone brands—fast, reliable, and professional service you can trust.
                 </p>
               </CardContent>
             </Card>
@@ -227,9 +227,9 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Tv className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">📺 Smart TV Repairs</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">📺 Smart TV Repair</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Professional Smart TV Repairs
+                  Reliable repair for all Smart TV brands—bringing your screen back to life.
                 </p>
               </CardContent>
             </Card>
@@ -237,9 +237,19 @@ const Home = () => {
             <Card className="card-hover border-glow group">
               <CardContent className="p-6">
                 <Battery className="w-10 h-10 text-accent mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-heading font-semibold mb-2">🔋 Solar Systems</h3>
+                <h3 className="text-lg font-heading font-semibold mb-2">🔋 Solar System Services</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Solar Energy System Installation and Repairs
+                  Installation, maintenance, and repair of solar systems to keep your power running efficiently.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover border-glow group">
+              <CardContent className="p-6">
+                <Settings className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-lg font-heading font-semibold mb-2">🛒 Parts Sales</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  With 15+ years of field experience, we source genuine parts locally and internationally—so our customers never pay for substandard components.
                 </p>
               </CardContent>
             </Card>

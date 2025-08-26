@@ -15,7 +15,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import servicesDevicesImage from "@/assets/services-devices.jpg";
+import servicesDevicesImage from "@/assets/professional-device-repairs.jpg";
 import servicesSolarImage from "@/assets/services-solar.jpg";
 import servicesDataImage from "@/assets/services-data.jpg";
 

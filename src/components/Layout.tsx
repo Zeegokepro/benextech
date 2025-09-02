@@ -25,13 +25,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                 alt="Benextech Logo" 
-                className="w-16 h-16 object-contain"
+                className="w-32 h-32 object-contain"
               />
-              <span className="text-xl font-heading font-bold text-white">Benextech</span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -155,13 +154,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center">
                 <img 
                   src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                   alt="Benextech Logo" 
-                  className="w-16 h-16 object-contain"
+                  className="w-32 h-32 object-contain"
                 />
-                <span className="text-xl font-heading font-bold">Benextech</span>
               </div>
               <p className="text-black text-sm">
                 Your one-stop hub for fixing Apple & Android devices, PCs, Smart TVs, and solar systems.

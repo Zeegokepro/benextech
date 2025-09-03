@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen bg-background">
       {/* Sticky Navigation */}
-      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-primary/30">
+      <header className="sticky top-0 z-50 bg-secondary/50 backdrop-blur-md border-b border-primary/30">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}

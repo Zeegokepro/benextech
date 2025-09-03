@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <img 
                 src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                 alt="Benextech Logo" 
-                className="w-32 h-32 object-contain"
+                className="w-48 h-48 object-contain"
               />
             </Link>
 
@@ -158,7 +158,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <img 
                   src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                   alt="Benextech Logo" 
-                  className="w-32 h-32 object-contain"
+                  className="w-48 h-48 object-contain"
                 />
               </div>
               <p className="text-black text-sm">

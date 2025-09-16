@@ -1,14 +1,29 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://your-project.supabase.co'
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY || import.meta.env.VITE_SUPABASE_KEY
+// Read possible keys without crashing the app if missing
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+  || (typeof window !== 'undefined' ? (window as any).__LOVABLE_SUPABASE_URL : undefined)
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error('Supabase environment variables:', { supabaseUrl, supabaseKey })
-  throw new Error('Missing Supabase environment variables. Please check your Lovable Cloud setup.')
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+  || import.meta.env.VITE_SUPABASE_KEY
+  || (typeof window !== 'undefined' ? (window as any).__LOVABLE_SUPABASE_ANON_KEY : undefined)
+
+// Don't throw at import time to avoid blank screen on pages that don't need Supabase
+let _client: SupabaseClient | null = null
+
+export const isSupabaseConfigured = Boolean(
+  supabaseUrl && supabaseKey && !String(supabaseUrl).includes('your-project')
+)
+
+export function getSupabase(): SupabaseClient {
+  if (!_client) {
+    if (!isSupabaseConfigured) {
+      throw new Error('Supabase is not configured. Open the Cloud tab to connect the project, then refresh.')
+    }
+    _client = createClient(supabaseUrl as string, supabaseKey as string)
+  }
+  return _client
 }
-
-export const supabase = createClient(supabaseUrl, supabaseKey)
 
 export type ContactSubmission = {
   id?: string

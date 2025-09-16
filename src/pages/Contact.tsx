@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, type ContactFormData } from "@/lib/schemas";
-import { supabase } from "@/lib/supabase";
+import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
 import { useState } from "react";
 import { 
   Phone, 
@@ -47,6 +47,10 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
+      if (!isSupabaseConfigured) {
+        throw new Error('Supabase not configured');
+      }
+      const supabase = getSupabase();
       const { error } = await supabase
         .from('contact_submissions')
         .insert([{

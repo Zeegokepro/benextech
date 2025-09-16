@@ -1,11 +1,57 @@
-import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
-import { useState } from "react";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import { Button } from "./ui/button";
+import { Menu, X, Phone, Shield, MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import type { User as SupabaseUser } from '@supabase/supabase-js';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [userRole, setUserRole] = useState<string | null>(null);
   const location = useLocation();
+
+  useEffect(() => {
+    // Check auth state
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          setTimeout(() => {
+            checkUserRole(session.user.id);
+          }, 0);
+        } else {
+          setUserRole(null);
+        }
+      }
+    );
+
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        setTimeout(() => {
+          checkUserRole(session.user.id);
+        }, 0);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const checkUserRole = async (userId: string) => {
+    try {
+      const { data: roles } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', userId);
+
+      const adminOrStaff = roles?.find(r => r.role === 'admin' || r.role === 'staff');
+      setUserRole(adminOrStaff?.role || null);
+    } catch (error) {
+      console.error('Error checking user role:', error);
+    }
+  };
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -53,8 +99,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               ))}
             </div>
 
-            {/* Contact Actions */}
+            {/* Contact Actions & Auth */}
             <div className="hidden md:flex items-center space-x-3">
+              {user ? (
+                <div className="flex items-center space-x-2">
+                  {userRole && (userRole === 'admin' || userRole === 'staff') && (
+                    <Button size="sm" variant="outline" asChild className="border-glow">
+                      <Link to="/admin">
+                        <Shield className="w-4 h-4 mr-2" />
+                        Admin
+                      </Link>
+                    </Button>
+                  )}
+                  <Button size="sm" variant="outline" onClick={() => supabase.auth.signOut()}>
+                    Sign Out
+                  </Button>
+                </div>
+              ) : (
+                <Button size="sm" variant="outline" asChild className="border-glow">
+                  <Link to="/auth">Sign In</Link>
+                </Button>
+              )}
               <Button
                 variant="outline"
                 size="sm"
@@ -111,6 +176,43 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                     {link.name}
                   </Link>
                 ))}
+                
+                {/* Mobile Auth */}
+                {user ? (
+                  <div className="flex flex-col space-y-2 pt-3">
+                    {userRole && (userRole === 'admin' || userRole === 'staff') && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="btn-glow border-glow w-full"
+                        asChild
+                      >
+                        <Link to="/admin">
+                          <Shield className="w-4 h-4 mr-2" />
+                          Admin Dashboard
+                        </Link>
+                      </Button>
+                    )}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                      onClick={() => supabase.auth.signOut()}
+                    >
+                      Sign Out
+                    </Button>
+                  </div>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="btn-glow border-glow w-full"
+                    asChild
+                  >
+                    <Link to="/auth">Sign In</Link>
+                  </Button>
+                )}
+                
                 <div className="flex flex-col space-y-2 pt-3">
                   <Button
                     variant="outline"
@@ -146,7 +248,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Main Content */}
       <main className="flex-1">
-        {children}
+        <Outlet />
       </main>
 
       {/* Footer */}

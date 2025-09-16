@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactFormSchema, type ContactFormData } from "@/lib/schemas";
+import { supabase } from "@/lib/supabase";
+import { useState } from "react";
 import { 
   Phone, 
   MessageCircle, 
@@ -15,10 +23,61 @@ import {
   Wrench,
   Battery,
   Database,
-  CheckCircle2
+  CheckCircle2,
+  Loader2
 } from "lucide-react";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      service_type: "",
+      device_details: "",
+      issue_description: "",
+      preferred_contact_time: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          name: data.name,
+          phone: data.phone,
+          email: data.email || null,
+          service_type: data.service_type,
+          device_details: data.device_details || null,
+          issue_description: data.issue_description,
+          preferred_contact_time: data.preferred_contact_time || null,
+        }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Request Submitted Successfully!",
+        description: "We'll contact you within 24 hours to discuss your service needs.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly at 07036399365.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactMethods = [
     {
       title: "Call Us Directly",
@@ -177,90 +236,177 @@ const Contact = () => {
 
               <Card className="border-glow">
                 <CardContent className="p-8">
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Your Name *</label>
-                        <Input 
-                          placeholder="Enter your full name" 
-                          className="border-glow" 
-                          required
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Your Name *</FormLabel>
+                              <FormControl>
+                                <Input 
+                                  placeholder="Enter your full name" 
+                                  className="border-glow" 
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone Number *</FormLabel>
+                              <FormControl>
+                                <Input 
+                                  placeholder="e.g., 07036399365" 
+                                  className="border-glow" 
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium">Phone Number *</label>
-                        <Input 
-                          placeholder="e.g., 07036399365" 
-                          className="border-glow" 
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Email Address</label>
-                      <Input 
-                        type="email"
-                        placeholder="your.email@example.com" 
-                        className="border-glow"
+                      
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email Address</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="email"
+                                placeholder="your.email@example.com" 
+                                className="border-glow"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Service Type *</label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {services.map((service, index) => {
-                          const ServiceIcon = service.icon;
-                          return (
-                            <Button
-                              key={index}
-                              variant="outline"
-                              className="border-glow justify-start h-auto p-3 text-left"
-                              type="button"
-                            >
-                              <ServiceIcon className="w-4 h-4 mr-2" />
-                              <div>
-                                <div className="text-sm font-medium">{service.name}</div>
-                                {service.urgent && (
-                                  <Badge variant="destructive" className="text-xs mt-1">Urgent</Badge>
-                                )}
-                              </div>
-                            </Button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Device/Model Details</label>
-                      <Input 
-                        placeholder="e.g., iPhone 14 Pro, MacBook Pro 16-inch, Samsung Galaxy S23" 
-                        className="border-glow"
+                      
+                      <FormField
+                        control={form.control}
+                        name="service_type"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Service Type *</FormLabel>
+                            <FormControl>
+                              <RadioGroup
+                                onValueChange={field.onChange}
+                                value={field.value}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-3"
+                              >
+                                {services.map((service, index) => {
+                                  const ServiceIcon = service.icon;
+                                  return (
+                                    <div key={index} className="flex items-center space-x-2">
+                                      <RadioGroupItem value={service.name} id={service.name} />
+                                      <label
+                                        htmlFor={service.name}
+                                        className="flex items-center cursor-pointer flex-1 border rounded-lg p-3 border-glow hover:bg-secondary/50 transition-colors"
+                                      >
+                                        <ServiceIcon className="w-4 h-4 mr-2" />
+                                        <div>
+                                          <div className="text-sm font-medium">{service.name}</div>
+                                          {service.urgent && (
+                                            <Badge variant="destructive" className="text-xs mt-1">Urgent</Badge>
+                                          )}
+                                        </div>
+                                      </label>
+                                    </div>
+                                  );
+                                })}
+                              </RadioGroup>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Describe the Issue *</label>
-                      <Textarea 
-                        placeholder="Please describe the problem in detail. What happened? When did it start? Have you tried any fixes?"
-                        className="border-glow min-h-[120px]"
-                        required
+                      
+                      <FormField
+                        control={form.control}
+                        name="device_details"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Device/Model Details</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="e.g., iPhone 14 Pro, MacBook Pro 16-inch, Samsung Galaxy S23" 
+                                className="border-glow"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
+                      
+                      <FormField
+                        control={form.control}
+                        name="issue_description"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Describe the Issue *</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Please describe the problem in detail. What happened? When did it start? Have you tried any fixes?"
+                                className="border-glow min-h-[120px]"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Preferred Contact Time</label>
-                      <Input 
-                        placeholder="e.g., Weekdays 9AM-5PM, ASAP, Evening hours" 
-                        className="border-glow"
+                      <FormField
+                        control={form.control}
+                        name="preferred_contact_time"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Preferred Contact Time</FormLabel>
+                            <FormControl>
+                              <Input 
+                                placeholder="e.g., Weekdays 9AM-5PM, ASAP, Evening hours" 
+                                className="border-glow"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
-                    
-                    <Button className="w-full btn-glow bg-primary hover:bg-primary/90" size="lg">
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Service Request
-                    </Button>
-                  </form>
+                      
+                      <Button 
+                        type="submit" 
+                        className="w-full btn-glow bg-primary hover:bg-primary/90" 
+                        size="lg"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                            Submitting...
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-5 h-5 mr-2" />
+                            Send Service Request
+                          </>
+                        )}
+                      </Button>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>

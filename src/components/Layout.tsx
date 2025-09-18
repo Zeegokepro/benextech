@@ -68,14 +68,14 @@ const Layout = () => {
     <div className="min-h-screen bg-background">
       {/* Sticky Navigation */}
       <header className="sticky top-0 z-50 bg-secondary/50 backdrop-blur-md border-b border-primary/30">
-        <nav className="container mx-auto px-4 py-4">
+        <nav className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                 alt="Benextech Logo" 
-                className="w-48 h-48 object-contain"
+                className="w-24 h-12 object-contain"
               />
             </Link>
 

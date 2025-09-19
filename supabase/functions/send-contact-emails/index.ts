@@ -85,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to business
     const businessEmailPromise = resend.emails.send({
       from: "Benextech Contact Form <onboarding@resend.dev>",
-      to: ["admin@benextech.com"], // Replace with your actual business email
+      to: ["benextech@gmail.com"],
       subject: `New Service Request from ${contactData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

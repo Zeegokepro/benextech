@@ -1,16 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { contactFormSchema, type ContactFormData } from "@/lib/schemas";
-import { getSupabase, isSupabaseConfigured } from "@/lib/supabase";
-import { useState } from "react";
 import { 
   Phone, 
   MessageCircle, 
@@ -18,96 +8,11 @@ import {
   MapPin, 
   Clock, 
   Mail,
-  Send,
   Zap,
-  Wrench,
-  Battery,
-  Database,
-  CheckCircle2,
-  Loader2
+  CheckCircle2
 } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "",
-      phone: "",
-      email: "",
-      service_type: "",
-      device_details: "",
-      issue_description: "",
-      preferred_contact_time: "",
-    },
-  });
-
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    try {
-      if (!isSupabaseConfigured) {
-        throw new Error('Supabase not configured');
-      }
-      const supabase = getSupabase();
-      
-      // First, save to database
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert([{
-          name: data.name,
-          phone: data.phone,
-          email: data.email || null,
-          service_type: data.service_type,
-          device_details: data.device_details || null,
-          issue_description: data.issue_description,
-          preferred_contact_time: data.preferred_contact_time || null,
-        }]);
-
-      if (dbError) throw dbError;
-
-      // Then, send emails
-      try {
-        const { error: emailError } = await supabase.functions.invoke('send-contact-emails', {
-          body: data
-        });
-
-        if (emailError) {
-          console.error('Error sending emails:', emailError);
-          // Don't fail the whole process if email fails
-          toast({
-            title: "Request Submitted Successfully!",
-            description: "We'll contact you within 24 hours. (Note: Confirmation email may be delayed)",
-          });
-        } else {
-          toast({
-            title: "Request Submitted Successfully!",
-            description: data.email 
-              ? "We'll contact you within 24 hours. Check your email for confirmation!"
-              : "We'll contact you within 24 hours to discuss your service needs.",
-          });
-        }
-      } catch (emailError) {
-        console.error('Email function error:', emailError);
-        toast({
-          title: "Request Submitted Successfully!",
-          description: "We'll contact you within 24 hours. (Note: Confirmation email may be delayed)",
-        });
-      }
-
-      form.reset();
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast({
-        title: "Submission Failed",
-        description: "Please try again or contact us directly at 07036399365.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   const contactMethods = [
     {
       title: "Call Us Directly",
@@ -139,15 +44,6 @@ const Contact = () => {
       href: "#",
       available: "New videos weekly"
     }
-  ];
-
-  const services = [
-    { name: "iPhone/Android Repair", icon: Wrench, urgent: true },
-    { name: "MacBook/PC Repair", icon: Wrench, urgent: true },
-    { name: "Solar Installation", icon: Battery, urgent: false },
-    { name: "Data Recovery", icon: Database, urgent: true },
-    { name: "System Optimization", icon: Zap, urgent: false },
-    { name: "Virus Removal", icon: Zap, urgent: true }
   ];
 
   return (
@@ -251,331 +147,178 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-20 bg-secondary/30">
+      {/* Contact Information Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Form */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                Book Your <span className="text-primary">Service</span>
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                Fill out the form below and we'll get back to you within hours with a solution and quote.
-              </p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Let's <span className="text-primary">Connect</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Ready to get your device fixed or upgrade your tech? Multiple ways to reach our expert team.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* Direct Contact */}
+            <Card className="border-glow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Phone className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-4">Call Direct</h3>
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <p className="font-medium text-primary text-lg">07036399365</p>
+                    <p className="text-sm text-muted-foreground">Primary Line</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-lg">08169711467</p>
+                    <p className="text-sm text-muted-foreground">Secondary Line</p>
+                  </div>
+                </div>
+                <Badge variant="outline" className="border-accent/30 text-accent mb-4">24/7 Emergency Support</Badge>
+                <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                  <a href="tel:07036399365">Call Now</a>
+                </Button>
+              </CardContent>
+            </Card>
 
-              <Card className="border-glow">
-                <CardContent className="p-8">
-                  <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <FormField
-                          control={form.control}
-                          name="name"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Your Name *</FormLabel>
-                              <FormControl>
-                                <Input 
-                                  placeholder="Enter your full name" 
-                                  className="border-glow" 
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                        <FormField
-                          control={form.control}
-                          name="phone"
-                          render={({ field }) => (
-                            <FormItem>
-                              <FormLabel>Phone Number *</FormLabel>
-                              <FormControl>
-                                <Input 
-                                  placeholder="e.g., 07036399365" 
-                                  className="border-glow" 
-                                  {...field}
-                                />
-                              </FormControl>
-                              <FormMessage />
-                            </FormItem>
-                          )}
-                        />
-                      </div>
-                      
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email Address</FormLabel>
-                            <FormControl>
-                              <Input 
-                                type="email"
-                                placeholder="your.email@example.com" 
-                                className="border-glow"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="service_type"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Service Type *</FormLabel>
-                            <FormControl>
-                              <RadioGroup
-                                onValueChange={field.onChange}
-                                value={field.value}
-                                className="grid grid-cols-1 md:grid-cols-2 gap-3"
-                              >
-                                {services.map((service, index) => {
-                                  const ServiceIcon = service.icon;
-                                  return (
-                                    <div key={index} className="flex items-center space-x-2">
-                                      <RadioGroupItem value={service.name} id={service.name} />
-                                      <label
-                                        htmlFor={service.name}
-                                        className="flex items-center cursor-pointer flex-1 border rounded-lg p-3 border-glow hover:bg-secondary/50 transition-colors"
-                                      >
-                                        <ServiceIcon className="w-4 h-4 mr-2" />
-                                        <div>
-                                          <div className="text-sm font-medium">{service.name}</div>
-                                          {service.urgent && (
-                                            <Badge variant="destructive" className="text-xs mt-1">Urgent</Badge>
-                                          )}
-                                        </div>
-                                      </label>
-                                    </div>
-                                  );
-                                })}
-                              </RadioGroup>
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="device_details"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Device/Model Details</FormLabel>
-                            <FormControl>
-                              <Input 
-                                placeholder="e.g., iPhone 14 Pro, MacBook Pro 16-inch, Samsung Galaxy S23" 
-                                className="border-glow"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <FormField
-                        control={form.control}
-                        name="issue_description"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Describe the Issue *</FormLabel>
-                            <FormControl>
-                              <Textarea 
-                                placeholder="Please describe the problem in detail. What happened? When did it start? Have you tried any fixes?"
-                                className="border-glow min-h-[120px]"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
+            {/* WhatsApp */}
+            <Card className="border-glow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <MessageCircle className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-4">WhatsApp Chat</h3>
+                <div className="space-y-3 mb-6">
+                  <p className="text-muted-foreground">Quick responses and media sharing</p>
+                  <p className="font-medium">Share photos of your device issues</p>
+                  <p className="text-sm text-muted-foreground">Usually respond within 30 minutes</p>
+                </div>
+                <Badge variant="outline" className="border-primary/30 text-primary mb-4">9AM - 9PM Daily</Badge>
+                <Button className="w-full bg-accent hover:bg-accent/90" asChild>
+                  <a href="https://wa.me/2349074839789" target="_blank" rel="noopener noreferrer">
+                    Start Chat
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
 
-                      <FormField
-                        control={form.control}
-                        name="preferred_contact_time"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Contact Time</FormLabel>
-                            <FormControl>
-                              <Input 
-                                placeholder="e.g., Weekdays 9AM-5PM, ASAP, Evening hours" 
-                                className="border-glow"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      
-                      <Button 
-                        type="submit" 
-                        className="w-full btn-glow bg-primary hover:bg-primary/90" 
-                        size="lg"
-                        disabled={isSubmitting}
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                            Submitting...
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5 mr-2" />
-                            Send Service Request
-                          </>
-                        )}
-                      </Button>
-                    </form>
-                  </Form>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Email */}
+            <Card className="border-glow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Mail className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-heading font-semibold mb-4">Email Support</h3>
+                <div className="space-y-3 mb-6">
+                  <p className="font-medium text-primary">benextech@gmail.com</p>
+                  <p className="text-sm text-muted-foreground">For quotes and non-urgent inquiries</p>
+                  <p className="text-sm text-muted-foreground">Detailed technical questions welcome</p>
+                </div>
+                <Badge variant="outline" className="border-accent/30 text-accent mb-4">24-48hr Response</Badge>
+                <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                  <a href="mailto:benextech@gmail.com">Send Email</a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
 
-            {/* Contact Info & Map */}
-            <div className="space-y-8">
-              <Card className="border-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-heading font-semibold mb-6 flex items-center">
-                    <MapPin className="w-5 h-5 text-primary mr-2" />
-                    Visit Our Service Center
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-medium mb-2">Main Service Hub</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Lagos Technology District<br />
-                        Professional repair facility with latest equipment<br />
-                        Free parking and comfortable waiting area
-                      </p>
-                      <div className="mt-3 pt-3 border-t border-border">
-                        <h4 className="font-medium mb-2 text-primary">Email Support</h4>
-                        <a 
-                          href="mailto:support@benextech.com" 
-                          className="text-sm text-accent hover:text-primary transition-colors font-medium"
-                        >
-                          support@benextech.com
-                        </a>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          For non-urgent inquiries and quotes
-                        </p>
-                      </div>
+          {/* Service Areas & Business Info */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Service Areas */}
+            <Card className="border-glow">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-heading font-semibold mb-6 flex items-center">
+                  <MapPin className="w-6 h-6 text-primary mr-3" />
+                  Service Coverage
+                </h3>
+                
+                <div className="grid grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-primary mb-3">Lagos Areas</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Victoria Island</li>
+                      <li>• Ikoyi</li>
+                      <li>• Lekki</li>
+                      <li>• Ikeja</li>
+                      <li>• Yaba</li>
+                      <li>• Surulere</li>
+                      <li>• All Lagos areas</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-accent mb-3">Other Cities</h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Abuja (FCT)</li>
+                      <li>• Port Harcourt</li>
+                      <li>• Ibadan</li>
+                      <li>• Kano</li>
+                      <li>• Enugu</li>
+                      <li>• On-request service</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-primary/10 rounded-lg">
+                  <p className="text-sm text-primary font-medium">
+                    📦 Nationwide mail-in service available for device repairs
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Business Hours & Why Choose Us */}
+            <Card className="border-glow">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-heading font-semibold mb-6 flex items-center">
+                  <Clock className="w-6 h-6 text-accent mr-3" />
+                  Business Hours
+                </h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Monday - Friday</span>
+                    <span className="text-primary">8:00 AM - 8:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Saturday</span>
+                    <span className="text-primary">9:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Sunday</span>
+                    <span className="text-primary">10:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between border-t pt-3">
+                    <span className="font-medium">Emergency Service</span>
+                    <span className="text-accent font-bold">24/7 Available</span>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold mb-4">Why Choose BenexTech?</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      <span className="text-sm">Free diagnostics & transparent pricing</span>
                     </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-medium mb-2 text-primary">Business Hours</h4>
-                        <div className="text-sm text-muted-foreground space-y-1">
-                          <div>Mon - Fri: 8:00 AM - 8:00 PM</div>
-                          <div>Saturday: 9:00 AM - 6:00 PM</div>
-                          <div>Sunday: 10:00 AM - 4:00 PM</div>
-                          <div className="text-accent font-medium">24/7 Emergency Service</div>
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <h4 className="font-medium mb-2 text-accent">Emergency Service</h4>
-                        <div className="text-sm text-muted-foreground space-y-1">
-                          <div>Critical business devices</div>
-                          <div>Data recovery emergencies</div>
-                          <div>Same-day repairs available</div>
-                          <div>On-site service for enterprises</div>
-                        </div>
-                      </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span className="text-sm">Certified technicians, 5+ years experience</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      <span className="text-sm">Up to 2 years warranty on repairs</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                      <span className="text-sm">Same-day service for urgent issues</span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-heading font-semibold mb-6 flex items-center">
-                    <Zap className="w-5 h-5 text-accent mr-2" />
-                    Service Areas
-                  </h3>
-                  
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="space-y-2">
-                      <h4 className="font-medium text-primary">Primary Coverage</h4>
-                      <div className="text-muted-foreground space-y-1">
-                        <div>• Lagos (All areas)</div>
-                        <div>• Abuja (FCT)</div>
-                        <div>• Port Harcourt</div>
-                        <div>• Ibadan</div>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <h4 className="font-medium text-accent">Extended Service</h4>
-                      <div className="text-muted-foreground space-y-1">
-                        <div>• Kano</div>
-                        <div>• Enugu</div>
-                        <div>• Kaduna</div>
-                        <div>• Other cities (on request)</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 p-4 bg-primary/10 rounded-lg">
-                    <p className="text-sm text-primary font-medium">
-                      📦 Mail-in service available nationwide for device repairs
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-glow">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-heading font-semibold mb-6">
-                    Why Choose <span className="text-primary">Benextech</span>?
-                  </h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent mt-1" />
-                      <div>
-                        <h4 className="font-medium">Free Diagnostics</h4>
-                        <p className="text-sm text-muted-foreground">No charge for initial problem assessment</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <h4 className="font-medium">Transparent Pricing</h4>
-                        <p className="text-sm text-muted-foreground">Clear quotes before we start any work</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent mt-1" />
-                      <div>
-                        <h4 className="font-medium">Quality Warranty</h4>
-                        <p className="text-sm text-muted-foreground">Up to 2 years warranty on repairs</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary mt-1" />
-                      <div>
-                        <h4 className="font-medium">Certified Technicians</h4>
-                        <p className="text-sm text-muted-foreground">Apple, Android, and solar certified experts</p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

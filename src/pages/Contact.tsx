@@ -51,7 +51,9 @@ const Contact = () => {
         throw new Error('Supabase not configured');
       }
       const supabase = getSupabase();
-      const { error } = await supabase
+      
+      // First, save to database
+      const { error: dbError } = await supabase
         .from('contact_submissions')
         .insert([{
           name: data.name,
@@ -63,12 +65,36 @@ const Contact = () => {
           preferred_contact_time: data.preferred_contact_time || null,
         }]);
 
-      if (error) throw error;
+      if (dbError) throw dbError;
 
-      toast({
-        title: "Request Submitted Successfully!",
-        description: "We'll contact you within 24 hours to discuss your service needs.",
-      });
+      // Then, send emails
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-contact-emails', {
+          body: data
+        });
+
+        if (emailError) {
+          console.error('Error sending emails:', emailError);
+          // Don't fail the whole process if email fails
+          toast({
+            title: "Request Submitted Successfully!",
+            description: "We'll contact you within 24 hours. (Note: Confirmation email may be delayed)",
+          });
+        } else {
+          toast({
+            title: "Request Submitted Successfully!",
+            description: data.email 
+              ? "We'll contact you within 24 hours. Check your email for confirmation!"
+              : "We'll contact you within 24 hours to discuss your service needs.",
+          });
+        }
+      } catch (emailError) {
+        console.error('Email function error:', emailError);
+        toast({
+          title: "Request Submitted Successfully!",
+          description: "We'll contact you within 24 hours. (Note: Confirmation email may be delayed)",
+        });
+      }
 
       form.reset();
     } catch (error) {

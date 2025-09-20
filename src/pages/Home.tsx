@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { 
   Wrench, 
   Zap, 
@@ -42,7 +40,7 @@ const Home = () => {
             Apple devices | PC | Smartphone | Gadgets | Smart TV | Solar Energy System | Training
           </h2>
           
-          <p className="text-sm font-bold text-primary mb-8 max-w-3xl mx-auto">
+          <p className="text-lg font-bold text-white mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
             Is your DEVICE (Apple, PC, Smartphone, Gadget, Smart TV, or Solar Energy System) ACTING UP? Don't worry, we've got you covered. Our expert technicians are here to provide top-notch repair services. Whether it's hardware issues or software glitches, we're here to diagnose and fix them all!
           </p>
 
@@ -464,52 +462,44 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Fast Contact Form */}
-      <section className="py-20 bg-secondary/30">
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12 slide-up">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                📞 Contact us now for a <span className="text-primary">free consultation</span> or to schedule a repair!
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="slide-up">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
+                Ready to Fix Your Device? <span className="text-primary">Let's Get Started!</span>
               </h2>
-              <p className="text-muted-foreground text-lg">
-                Your Device or Gadget's health is our priority.
+              <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+                Don't let tech problems hold you back. Contact Benextech today for professional repair services, 
+                solar installations, or join our training programs.
               </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="btn-glow bg-primary hover:bg-primary/90 text-lg px-8 py-6"
+                  asChild
+                >
+                  <Link to="/contact">
+                    <Wrench className="w-5 h-5 mr-2" />
+                    Get Free Consultation
+                  </Link>
+                </Button>
+                
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="btn-glow border-glow text-lg px-8 py-6"
+                  asChild
+                >
+                  <Link to="/services">
+                    <Zap className="w-5 h-5 mr-2" />
+                    View All Services
+                  </Link>
+                </Button>
+              </div>
             </div>
-
-            <Card className="border-glow">
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Your Name</label>
-                      <Input placeholder="Enter your name" className="border-glow" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Phone Number</label>
-                      <Input placeholder="Enter your phone" className="border-glow" />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Device/Service Type</label>
-                    <Input placeholder="e.g., iPhone screen, MacBook repair, Solar installation" className="border-glow" />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Describe the Issue</label>
-                    <Textarea 
-                      placeholder="Tell us what's wrong or what service you need..."
-                      className="border-glow min-h-[100px]"
-                    />
-                  </div>
-                  
-                  <Button className="w-full btn-glow bg-primary hover:bg-primary/90" size="lg">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

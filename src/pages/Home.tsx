@@ -34,9 +34,9 @@ const Home = () => {
           decoding="async"
         />
         
-        {/* Desktop-matching dark overlays */}
-        <div className="absolute inset-0 bg-slate-900/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-800/70 to-slate-900/40"></div>
+        {/* Consistent background overlays using design system */}
+        <div className="absolute inset-0 bg-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-muted/80 to-background/60"></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

@@ -299,10 +299,10 @@ const Layout = () => {
                 <span>07036399365</span>
                 <span>08169711467</span>
                 <a 
-                  href="mailto:support@benextech.com" 
+                  href="mailto:benextech@gmail.com" 
                   className="hover:text-primary transition-colors"
                 >
-                  support@benextech.com
+                  benextech@gmail.com
                 </a>
                 <a 
                   href="https://wa.me/2349074839789" 

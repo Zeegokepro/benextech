@@ -18,17 +18,17 @@ All colors MUST be HSL.
     --popover: 240 6% 15%;
     --popover-foreground: 210 17% 98%;
 
-    --primary: 211 100% 50%; /* Electric Blue #007BFF */
-    --primary-foreground: 210 17% 98%;
+    --primary: 211 100% 45%; /* Darker blue for better contrast #0066CC */
+    --primary-foreground: 0 0% 100%; /* Pure white for maximum contrast */
 
-    --secondary: 158 64% 82%; /* Cool Mint #A7F3D0 */
-    --secondary-foreground: 240 6% 12%;
+    --secondary: 158 54% 75%; /* Slightly darker mint for better contrast */
+    --secondary-foreground: 0 0% 0%; /* Pure black for maximum contrast */
 
     --muted: 240 6% 25%;
-    --muted-foreground: 210 17% 70%;
+    --muted-foreground: 210 17% 75%; /* Lighter for better contrast */
 
-    --accent: 248 100% 69%; /* Cyber Purple #7B61FF */
-    --accent-foreground: 210 17% 98%;
+    --accent: 248 100% 65%; /* Slightly darker purple for better contrast */
+    --accent-foreground: 0 0% 100%; /* Pure white for maximum contrast */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 17% 98%;
@@ -40,9 +40,9 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --glow-primary: 211 100% 50%;
-    --glow-accent: 248 100% 69%;
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(248 100% 69%));
+    --glow-primary: 211 100% 45%;
+    --glow-accent: 248 100% 65%;
+    --gradient-primary: linear-gradient(135deg, hsl(211 100% 45%), hsl(248 100% 65%));
     --gradient-card: linear-gradient(145deg, hsl(240 6% 15%), hsl(240 6% 20%));
     --shadow-glow: 0 0 20px hsl(var(--glow-primary) / 0.3);
     --shadow-accent-glow: 0 0 20px hsl(var(--glow-accent) / 0.3);
@@ -55,12 +55,12 @@ All colors MUST be HSL.
 
     --sidebar-background: 210 11% 11%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 211 100% 50%;
+    --sidebar-primary: 211 100% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 11% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 210 11% 25%;
-    --sidebar-ring: 211 100% 50%;
+    --sidebar-ring: 211 100% 45%;
   }
 
   .dark {

@@ -21,5 +21,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     sourcemap: true,
+    cssCodeSplit: false, // Bundle CSS into a single file for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
   },
 }));

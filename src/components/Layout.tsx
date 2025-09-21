@@ -76,6 +76,9 @@ const Layout = () => {
                 src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                 alt="Benextech Logo" 
                 className="w-24 h-12 object-contain"
+                width="96"
+                height="48"
+                loading="eager"
               />
             </Link>
 
@@ -261,6 +264,9 @@ const Layout = () => {
                   src="/lovable-uploads/e1c6537c-db4e-49de-96c8-039971d1e6f9.png" 
                   alt="Benextech Logo" 
                   className="w-48 h-48 object-contain"
+                  width="192"
+                  height="192"
+                  loading="lazy"
                 />
               </div>
               <p className="text-black text-sm">

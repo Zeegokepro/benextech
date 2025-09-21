@@ -34,9 +34,9 @@ const Home = () => {
           decoding="async"
         />
         
-        {/* Simplified gradient overlays */}
-        <div className="absolute inset-0 bg-background/80"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+        {/* Consistent gradient overlays */}
+        <div className="absolute inset-0 bg-background/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-background/20"></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

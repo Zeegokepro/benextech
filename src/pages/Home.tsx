@@ -23,15 +23,22 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(28, 28, 30, 0.8), rgba(0, 123, 255, 0.1)), url(${heroImage})`
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Optimized background image */}
+        <img 
+          src={heroImage}
+          alt="Benextech Tech Repair Services"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
         
-        <div className="relative z-10 container mx-auto px-4 text-center fade-in">
+        {/* Simplified gradient overlays */}
+        <div className="absolute inset-0 bg-background/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Welcome to Benextech [iFix]
           </h1>

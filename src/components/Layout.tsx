@@ -156,6 +156,7 @@ const Layout = () => {
               size="sm"
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>

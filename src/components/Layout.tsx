@@ -281,7 +281,7 @@ const Layout = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-heading font-semibold">Quick Links</h4>
+              <h3 className="font-heading font-semibold">Quick Links</h3>
               <div className="flex flex-col space-y-2">
                 {navLinks.map((link) => (
                   <Link
@@ -296,7 +296,7 @@ const Layout = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-heading font-semibold">Services</h4>
+              <h3 className="font-heading font-semibold">Services</h3>
               <div className="flex flex-col space-y-2 text-sm text-black">
                 <span>Device Repairs</span>
                 <span>Solar Installation</span>
@@ -306,7 +306,7 @@ const Layout = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-heading font-semibold">Contact</h4>
+              <h3 className="font-heading font-semibold">Contact</h3>
               <div className="flex flex-col space-y-2 text-sm text-black">
                 <span>07036399365</span>
                 <span>08169711467</span>

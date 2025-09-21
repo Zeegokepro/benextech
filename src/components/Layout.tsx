@@ -267,6 +267,12 @@ const Layout = () => {
                   width="192"
                   height="192"
                   loading="lazy"
+                  decoding="async"
+                  style={{ 
+                    maxWidth: '192px', 
+                    maxHeight: '192px',
+                    objectFit: 'contain'
+                  }}
                 />
               </div>
               <p className="text-black text-sm">

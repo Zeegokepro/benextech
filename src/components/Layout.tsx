@@ -91,7 +91,7 @@ const Layout = () => {
                     className={`relative text-sm font-medium transition-colors duration-300 hover:text-primary ${
                       isActivePath(link.path) 
                         ? "text-primary" 
-                        : "text-white"
+                        : "text-foreground"
                     }`}
                 >
                   {link.name}
@@ -173,7 +173,7 @@ const Layout = () => {
                     className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
                       isActivePath(link.path) 
                         ? "text-primary" 
-                        : "text-white"
+                        : "text-foreground"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -276,7 +276,7 @@ const Layout = () => {
                   }}
                 />
               </div>
-              <p className="text-black text-sm">
+              <p className="text-muted-foreground text-sm">
                 Your one-stop hub for fixing Apple & Android devices, PCs, Smart TVs, and solar systems.
               </p>
             </div>
@@ -288,7 +288,7 @@ const Layout = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-sm text-black hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -298,7 +298,7 @@ const Layout = () => {
 
             <div className="space-y-4">
               <h3 className="font-heading font-semibold">Services</h3>
-              <div className="flex flex-col space-y-2 text-sm text-black">
+              <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                 <span>Device Repairs</span>
                 <span>Solar Installation</span>
                 <span>Data Recovery</span>
@@ -308,7 +308,7 @@ const Layout = () => {
 
             <div className="space-y-4">
               <h3 className="font-heading font-semibold">Contact</h3>
-              <div className="flex flex-col space-y-2 text-sm text-black">
+              <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                 <span>07036399365</span>
                 <span>08169711467</span>
                 <a 
@@ -337,7 +337,7 @@ const Layout = () => {
             </div>
           </div>
           
-          <div className="mt-8 pt-8 border-t border-primary/30 text-center text-sm text-black">
+          <div className="mt-8 pt-8 border-t border-primary/30 text-center text-sm text-muted-foreground">
             <p>&copy; 2024 Benextech. All rights reserved. Built with expert hands, advanced tools, and trusted support.</p>
             <p className="mt-2">CAC Registration: BENEXTECH CONNECT SYSTEMS - RC: 8661250</p>
           </div>

@@ -80,7 +80,7 @@ const Home = () => {
               className="btn-glow btn-youtube text-lg px-8 py-6"
               asChild
             >
-              <a href="https://youtube.com/@benextech" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-5 h-5 mr-2" />
                 Watch on YouTube
               </a>

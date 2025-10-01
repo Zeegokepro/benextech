@@ -326,12 +326,20 @@ const Layout = () => {
                   WhatsApp Chat
                 </a>
                 <a 
-                  href="#" 
+                  href="https://youtube.com/@benextech" 
                   className="hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   YouTube Channel
+                </a>
+                <a 
+                  href="https://g.co/kgs/benextech" 
+                  className="hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google My Business
                 </a>
               </div>
             </div>

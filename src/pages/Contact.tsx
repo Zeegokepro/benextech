@@ -41,7 +41,7 @@ const Contact = () => {
       secondary: "Watch repair tutorials",
       icon: Youtube,
       action: "Subscribe",
-      href: "#",
+      href: "https://youtube.com/@benextech",
       available: "New videos weekly"
     }
   ];

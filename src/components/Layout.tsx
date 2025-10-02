@@ -325,22 +325,6 @@ const Layout = () => {
                 >
                   WhatsApp Chat
                 </a>
-                <a 
-                  href="https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum" 
-                  className="hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  YouTube Channel
-                </a>
-                <a 
-                  href="https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7" 
-                  className="hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google My Business
-                </a>
               </div>
             </div>
           </div>

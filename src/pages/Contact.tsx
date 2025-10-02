@@ -386,29 +386,6 @@ const Contact = () => {
                   </a>
                 </Button>
               </div>
-              
-              <div className="mt-8 pt-8 border-t border-primary/20">
-                <p className="text-sm text-muted-foreground mb-4">Follow us for repair tips and tech updates</p>
-                <div className="flex items-center justify-center gap-6">
-                  <a 
-                    href="https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum" 
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    YouTube Channel
-                  </a>
-                  <span className="text-muted-foreground">•</span>
-                  <a 
-                    href="https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7" 
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Google My Business
-                  </a>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </div>

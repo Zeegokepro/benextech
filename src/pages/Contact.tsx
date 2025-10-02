@@ -4,24 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   MessageCircle, 
-  Youtube, 
   MapPin, 
   Clock, 
   Mail,
   Zap,
-  CheckCircle2,
-  Copy
+  CheckCircle2
 } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-
-const copyLink = async (url: string) => {
-  try {
-    await navigator.clipboard.writeText(url);
-    toast({ title: "Link copied", description: "Paste in a new tab to open outside the preview." });
-  } catch {
-    toast({ title: "Couldn't copy link", description: url });
-  }
-};
 
 const Contact = () => {
   const contactMethods = [
@@ -45,16 +33,6 @@ const Contact = () => {
       href: "https://wa.me/2349074839789",
       available: "9AM - 9PM Daily"
     },
-    {
-      title: "YouTube Channel",
-      description: "Tech tips and service showcase",
-      primary: "Benextech Channel",
-      secondary: "Watch repair tutorials",
-      icon: Youtube,
-      action: "Subscribe",
-      href: "https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1",
-      available: "New videos weekly"
-    }
   ];
 
   return (
@@ -149,14 +127,6 @@ const Contact = () => {
                       >
                         {method.action}
                       </a>
-                    </Button>
-                    <Button 
-                      variant="outline"
-                      className="w-full mt-2"
-                      onClick={() => copyLink(method.href)}
-                    >
-                      <Copy className="w-4 h-4 mr-2" />
-                      Copy Link
                     </Button>
                   </CardContent>
                 </Card>

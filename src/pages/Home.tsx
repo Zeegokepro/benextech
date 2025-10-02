@@ -3,8 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Wrench, 
   Zap, 
-  Youtube, 
-  MapPin,
   Star, 
   Shield, 
   Clock, 
@@ -14,21 +12,10 @@ import {
   Tv,
   Battery,
   Database,
-  Settings,
-  Copy
+  Settings
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const heroImage = "/lovable-uploads/7946b20c-058f-4327-91ec-1af156d63960.png";
-import { toast } from "@/components/ui/use-toast";
-
-const copyLink = async (url: string) => {
-  try {
-    await navigator.clipboard.writeText(url);
-    toast({ title: "Link copied", description: "Paste in a new tab to open outside the preview." });
-  } catch {
-    toast({ title: "Couldn't copy link", description: url });
-  }
-};
 
 const Home = () => {
   return (
@@ -86,53 +73,6 @@ const Home = () => {
               </Link>
             </Button>
             
-            <Button 
-              size="lg" 
-              className="btn-glow btn-youtube text-lg px-8 py-6"
-              asChild
-            >
-              <a 
-                href="https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Youtube className="w-5 h-5 mr-2" />
-                Watch on YouTube
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="btn-glow border-glow text-lg px-6 py-6"
-              onClick={() => copyLink("https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1")}
-            >
-              <Copy className="w-5 h-5 mr-2" />
-              Copy Link
-            </Button>
-            
-            <Button 
-              size="lg" 
-              className="btn-glow btn-google text-lg px-8 py-6"
-              asChild
-            >
-              <a 
-                href="https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <MapPin className="w-5 h-5 mr-2" />
-                Google My Business
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="btn-glow border-glow text-lg px-6 py-6"
-              onClick={() => copyLink("https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7")}
-            >
-              <Copy className="w-5 h-5 mr-2" />
-              Copy Link
-            </Button>
           </div>
         </div>
       </section>

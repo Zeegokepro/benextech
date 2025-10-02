@@ -325,22 +325,18 @@ const Layout = () => {
                 >
                   WhatsApp Chat
                 </a>
-                <a 
-                  href="https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1" 
-                  className="hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => window.open('https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1', '_blank', 'noopener,noreferrer')}
+                  className="hover:text-primary transition-colors text-left"
                 >
                   YouTube Channel
-                </a>
-                <a 
-                  href="https://g.co/kgs/benextech" 
-                  className="hover:text-primary transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button 
+                  onClick={() => window.open('https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7', '_blank', 'noopener,noreferrer')}
+                  className="hover:text-primary transition-colors text-left"
                 >
                   Google My Business
-                </a>
+                </button>
               </div>
             </div>
           </div>

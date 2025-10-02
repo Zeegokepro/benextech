@@ -41,7 +41,7 @@ const Contact = () => {
       secondary: "Watch repair tutorials",
       icon: Youtube,
       action: "Subscribe",
-      href: "https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1",
+      onClick: () => window.open('https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1', '_blank', 'noopener,noreferrer'),
       available: "New videos weekly"
     }
   ];
@@ -128,16 +128,14 @@ const Contact = () => {
                     </div>
                     
                     <Button 
-                      className="btn-glow bg-primary hover:bg-primary/90 w-full" 
-                      asChild
+                      className="btn-glow bg-primary hover:bg-primary/90 w-full"
+                      onClick={method.onClick || (() => {
+                        if (method.href) {
+                          window.open(method.href, method.href.startsWith('http') ? '_blank' : '_self', 'noopener,noreferrer');
+                        }
+                      })}
                     >
-                      <a 
-                        href={method.href} 
-                        target={method.href.startsWith('http') ? '_blank' : undefined}
-                        rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      >
-                        {method.action}
-                      </a>
+                      {method.action}
                     </Button>
                   </CardContent>
                 </Card>

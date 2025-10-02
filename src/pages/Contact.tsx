@@ -9,8 +9,19 @@ import {
   Clock, 
   Mail,
   Zap,
-  CheckCircle2
+  CheckCircle2,
+  Copy
 } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
+
+const copyLink = async (url: string) => {
+  try {
+    await navigator.clipboard.writeText(url);
+    toast({ title: "Link copied", description: "Paste in a new tab to open outside the preview." });
+  } catch {
+    toast({ title: "Couldn't copy link", description: url });
+  }
+};
 
 const Contact = () => {
   const contactMethods = [
@@ -138,6 +149,14 @@ const Contact = () => {
                       >
                         {method.action}
                       </a>
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="w-full mt-2"
+                      onClick={() => copyLink(method.href)}
+                    >
+                      <Copy className="w-4 h-4 mr-2" />
+                      Copy Link
                     </Button>
                   </CardContent>
                 </Card>

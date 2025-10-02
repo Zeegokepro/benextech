@@ -72,7 +72,26 @@ const Home = () => {
                 View Services
               </Link>
             </Button>
-            
+          </div>
+
+          <div className="mt-6 flex items-center justify-center gap-6 text-sm">
+            <a 
+              href="https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum" 
+              className="text-foreground/80 hover:text-primary transition-colors underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch on YouTube
+            </a>
+            <span className="text-foreground/50">•</span>
+            <a 
+              href="https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7" 
+              className="text-foreground/80 hover:text-primary transition-colors underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Find us on Google
+            </a>
           </div>
         </div>
       </section>

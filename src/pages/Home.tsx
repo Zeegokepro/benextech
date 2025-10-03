@@ -35,8 +35,8 @@ const Home = () => {
         />
         
         {/* Lighter overlays to let background image show through */}
-        <div className="absolute inset-0 bg-background/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-muted/30 to-background/20"></div>
+        <div className="absolute inset-0 bg-background/40 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-muted/30 to-background/20 pointer-events-none"></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

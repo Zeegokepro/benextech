@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   MessageCircle, 
+  Youtube, 
   MapPin, 
   Clock, 
   Mail,
@@ -33,6 +34,16 @@ const Contact = () => {
       href: "https://wa.me/2349074839789",
       available: "9AM - 9PM Daily"
     },
+    {
+      title: "YouTube Channel",
+      description: "Tech tips and service showcase",
+      primary: "Benextech Channel",
+      secondary: "Watch repair tutorials",
+      icon: Youtube,
+      action: "Subscribe",
+      href: "https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1",
+      available: "New videos weekly"
+    }
   ];
 
   return (

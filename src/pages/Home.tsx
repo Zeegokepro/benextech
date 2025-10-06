@@ -81,7 +81,7 @@ const Home = () => {
               asChild
             >
               <a 
-                href="https://youtube.com/@benextech_techserviceexpert?si=sWx_CSqmUeoPdYsh&sub_confirmation=1" 
+                href="https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

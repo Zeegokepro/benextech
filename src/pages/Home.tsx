@@ -81,10 +81,10 @@ const Home = () => {
               asChild
             >
               <a 
-                href="https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum" 
+                href="https://www.youtube.com/@benextech_techserviceexpert" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={(e) => { e.preventDefault(); window.open('https://youtube.com/@benextech_techserviceexpert?si=6OadF89HD5e_ljum', '_blank', 'noopener,noreferrer'); }}
+                onClick={(e) => { e.preventDefault(); window.open('https://www.youtube.com/@benextech_techserviceexpert', '_blank', 'noopener,noreferrer'); }}
               >
                 <Youtube className="w-5 h-5 mr-2" />
                 Watch on YouTube

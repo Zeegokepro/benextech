@@ -84,7 +84,6 @@ const Home = () => {
                 href="https://www.youtube.com/@benextech_techserviceexpert" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={(e) => { e.preventDefault(); window.open('https://www.youtube.com/@benextech_techserviceexpert', '_blank', 'noopener,noreferrer'); }}
               >
                 <Youtube className="w-5 h-5 mr-2" />
                 Watch on YouTube
@@ -100,7 +99,6 @@ const Home = () => {
                 href="https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                onClick={(e) => { e.preventDefault(); window.open('https://maps.app.goo.gl/s6nbTjPVNZq5xxuj7', '_blank', 'noopener,noreferrer'); }}
               >
                 <MapPin className="w-5 h-5 mr-2" />
                 Google My Business
